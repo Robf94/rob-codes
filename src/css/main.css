@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+section {
+  scroll-margin-top: 50px;
+}
+
+.header-logo {
+  width: 100px;
+}
+
+.carousel-container .gradient {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(to top, black, transparent 40%);
+}
+.carousel-container .carousel-item {
+  height: 100vh;
+}
+.carousel-container .c-img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.img-container {
+  display: flex;
+  justify-content: center;
+}
+.img-container .rob-photo {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 300px;
+  height: 300px;
+}
+
+.card {
+  margin: 5px;
+}

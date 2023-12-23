@@ -4,6 +4,7 @@ $section-margin: 20px;
 $footer-padding: 20px;
 $card-height: 100%;
 $navbar-height: 50px;
+$header-footer-color: #f8f9fa;
 
 // RESETS
 
@@ -61,8 +62,7 @@ section {
 }
 
 .card {
-    margin: 5px;
-    height: $card-height;
+    height: $card-height; // seems to mess up vertical spacing
     .card-img-fit {
         aspect-ratio: 5 / 3;
         object-fit: contain;
@@ -76,24 +76,37 @@ section {
     }
 }
 
-.img-container {
-    display: flex;
-    justify-content: center;
-    .rob-photo {
-        object-fit: cover;
-        width: 300px;
-        height: 300px;
+#about-me {
+    .row-about {
+        align-items: center;
+        justify-content: space-around;
+    }
+    background-color: #dbd0fb;
+    height: calc(100vh - $navbar-height);
+    .txt-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .img-container {
+        display: flex;
+        justify-content: center;
+        width: fit-content;
+        .rob-photo {
+            object-fit: cover;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+        }
     }
 }
 
-#my-projects, #about-me, #say-hello {
+#my-projects, #say-hello {
     margin: $section-margin;
 }
 
-
 .footer-container {
-    margin: 0;
     padding: $footer-padding;
+    background-color: #f8f9fa;
     hr {
         width: 60px;
         background-color: #7c4dff;

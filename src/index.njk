@@ -3,9 +3,28 @@ layout: "default.njk"
 pageTitle: Home
 ---
 
+  <!-- About Me -->
+
+  <section class="about container-fluid" id="about-me">
+
+    <div class="row row-about h-100">
+
+      <div class="col-12 col-md-6 txt-container">
+        <h2 class="section-headings">Hi, I'm Rob</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, optio fuga nostrum necessitatibus unde aliquid error omnis! Aspernatur inventore ratione, asperiores at obcaecati, fuga a porro beatae animi, commodi iure.</p>
+      </div>
+
+      <div class="col-12 col-md-6 img-container">
+        <img class="img-fluid rob-photo" src="../assets/me/rob.jpg" alt="A photo of Rob">
+      </div>
+
+    </div>
+
+  </section>
+
   <!-- Hero -->
 
-  <section id="hero">
+  <!-- <section id="hero">
 
     <div id="carouselExampleAutoplaying" class="carousel slide carousel-container" data-bs-ride="carousel">
       <div class="carousel-inner">
@@ -50,7 +69,7 @@ pageTitle: Home
       </button>
 
     </div>
-  </section>
+  </section> -->
 
   <!-- Projects -->
 
@@ -58,9 +77,8 @@ pageTitle: Home
 
     <h2 class="section-headings">Work</h2>
 
-    <div class="card-container row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-4 g-0">
-      <!-- gutter causes overflow issues but removes spacing between cards when removed.  -->
-      <!-- No gaps between cards when wrapping to new rows on smaller screens -->
+    <div class="card-container row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-4 g-4">
+
       <div class="col">
         <div class="card">
           <img src="./assets/booki/Booki@3x.png" class="card-img-top card-img-fit" alt="Booki Logo">
@@ -71,6 +89,7 @@ pageTitle: Home
           </div>
         </div>
       </div>
+
       <div class="col">
         <div class="card">
           <img src="./assets/ohmyfood/ohmyfood.png" class="card-img-top card-img-fit card-img" alt="Ohmyfood Logo">
@@ -81,9 +100,10 @@ pageTitle: Home
           </div>
         </div>
       </div>
+
       <div class="col">
         <div class="card">
-          <img src="./assets/pint/B870F3D1-79B0-4696-BF7E-410C1FB6B03D.png" class="card-img-top card-img-fit" alt="...">
+          <img src="./assets/pint/B870F3D1-79B0-4696-BF7E-410C1FB6B03D.png" class="card-img-top card-img-fit" alt="PINT Logo">
           <div class="card-body">
             <h5 class="card-title">People In Need Today</h5>
             <p class="card-text">My first real-world project. I created a simple holding page with links to socials, a donation page and contact details. We are currently in the process of building the full website.</p>
@@ -91,6 +111,7 @@ pageTitle: Home
           </div>
         </div>
       </div>
+
       <div class="col">
         <div class="card">
           <img src="https://images.unsplash.com/photo-1636969423277-8757e3f2cf99?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDl8fHxlbnwwfHx8fHw%3D" class="card-img-top card-img-fit" alt="...">
@@ -101,24 +122,22 @@ pageTitle: Home
           </div>
         </div>
       </div>
+
+      <div class="col">
+        <div class="card">
+  
+            <img src="..." class="img-fluid rounded-start" alt="...">
+
+
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+            </div>
+
+        </div>
+      </div>
+
     </div>
   </section>
 
-  <!-- About Me -->
-
-  <section id="about-me">
-
-    <h2 class="section-headings">About Me</h2>
-
-    <div class="row g-0 container-fluid about-container">
-
-      <div class="col-md-6 col-sm-12">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, optio fuga nostrum necessitatibus unde aliquid error omnis! Aspernatur inventore ratione, asperiores at obcaecati, fuga a porro beatae animi, commodi iure.</p>
-      </div>
-
-      <div class="col-md-6 col-sm-12 img-container">
-          <img class="img-fluid rob-photo" src="../assets/me/rob.jpg" alt="A photo of Rob">
-      </div>
-    </div>
-
-  </section>

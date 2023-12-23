@@ -32,7 +32,6 @@ section {
 }
 
 .card {
-  margin: 5px;
   height: 100%;
 }
 .card .card-img-fit {
@@ -48,24 +47,39 @@ section {
   margin-top: auto;
 }
 
-.img-container {
+#about-me {
+  background-color: #dbd0fb;
+  height: calc(100vh - 50px);
+}
+#about-me .row-about {
+  align-items: center;
+  justify-content: space-around;
+}
+#about-me .txt-container {
+  display: flex;
+  flex-direction: column;
+}
+#about-me .img-container {
   display: flex;
   justify-content: center;
+  width: -moz-fit-content;
+  width: fit-content;
 }
-.img-container .rob-photo {
+#about-me .img-container .rob-photo {
   -o-object-fit: cover;
      object-fit: cover;
   width: 300px;
   height: 300px;
+  border-radius: 50%;
 }
 
-#my-projects, #about-me, #say-hello {
+#my-projects, #say-hello {
   margin: 20px;
 }
 
 .footer-container {
-  margin: 0;
   padding: 20px;
+  background-color: #f8f9fa;
 }
 .footer-container hr {
   width: 60px;

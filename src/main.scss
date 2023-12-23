@@ -1,23 +1,31 @@
+// VARIABLES
+
+$section-margin: 20px;
+$footer-padding: 20px;
+$card-height: 100%;
+$navbar-height: 50px;
+
 // RESETS
 
-* {
-    box-sizing: border-box;
-}
+// * {
+//     box-sizing: border-box;
+// }
+
+// Bootstrap is border box by default
 
 body {
     margin: 0;
+    padding-top: $navbar-height;
 }
 
 // END RESETS
 
-// VARIABLES
 
-$section-margin: 0px 20px;
 
 // UNIVERSAL BEHAVIOUR
 
 section {
-    scroll-margin-top: 50px; // Pads the sections down to compensate for fixed navbar
+    scroll-margin-top: $navbar-height; // Pads the anchor to sections down to compensate for fixed navbar
     //     .section-headings {
     //     margin: 20px;
     // }
@@ -25,14 +33,15 @@ section {
 
 // END UNIVERSAL BEHAVIOUR
 
-// .navbar-custom {
-//     background-color: #288cd7 !important;
-// }
+.navbar-custom {
+    height: $navbar-height;
+}
 
 .header-logo {
     width: 100px;
-    // height: 100%;
+    // slightly increases navbar height, remove image for now
 }
+
 
 .carousel-container {
     .gradient {
@@ -42,7 +51,7 @@ section {
         background-image: linear-gradient(to top, black, transparent 40%);
     }
     .carousel-item {
-        height: 100vh;
+        height: calc(100vh - $navbar-height);
     }
     .c-img {
         object-fit: cover;
@@ -51,20 +60,23 @@ section {
     }
 }
 
-// .projects {
-//     margin: $section-margin;
-// }
-
-// #about-me {
-//     margin: $section-margin;
-// }
-
-// #say-hello {
-//     margin: $section-margin;
-// }
+.card {
+    margin: 5px;
+    height: $card-height;
+    .card-img-fit {
+        aspect-ratio: 5 / 3;
+        object-fit: contain;
+    }
+    .card-body {
+        display: flex;
+        flex-direction: column;
+        .card-btn {
+            margin-top: auto;
+        }
+    }
+}
 
 .img-container {
-    // margin: 50px;
     display: flex;
     justify-content: center;
     .rob-photo {
@@ -74,6 +86,17 @@ section {
     }
 }
 
-.card {
-    margin: 5px;
+#my-projects, #about-me, #say-hello {
+    margin: $section-margin;
+}
+
+
+.footer-container {
+    margin: 0;
+    padding: $footer-padding;
+    hr {
+        width: 60px;
+        background-color: #7c4dff;
+        height: 2px
+    }
 }

@@ -34,9 +34,11 @@ section {
 
 // END UNIVERSAL BEHAVIOUR
 
-.navbar-custom {
-    height: $navbar-height;
-}
+// .navbar-custom {
+//     height: $navbar-height;
+// }
+
+// setting height of navbar manually messes up dropdown background. Need to determine how to match the height of navbar set by bootstrap in order to pad content down to match navbar height
 
 .header-logo {
     width: 100px;

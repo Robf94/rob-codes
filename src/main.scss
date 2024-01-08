@@ -13,7 +13,7 @@ $header-footer-color: #f8f9fa;
 
 body {
     margin: 0;
-    padding-top: $navbar-height;
+    // padding-top: $navbar-height; // removed after changing nav to sticky from fixed
 }
 
 // END RESETS
@@ -32,10 +32,9 @@ section {
 
 .navbar-custom {
     min-height: $navbar-height;
-    // padding: 10px 0; // content in nav moves up slightly when expanding dropdown on mobile view. this does not happen when min-height is not set or nav padding overridden
+    padding: 10px 0; // content in nav moves up slightly when expanding dropdown on mobile view. this does not happen when min-height is not set or nav padding overridden
     .header-logo {
         height: 30px;
-        // slightly increases navbar height, remove image for now
     }
 }
 
@@ -99,14 +98,12 @@ section {
     }
 }
 
-
-
 .footer-container {
     padding: $footer-padding;
     background-color: #f8f9fa;
     hr {
         width: 60px;
-        background-color: #7c4dff;
-        height: 2px
+        background-color: #dbd0fb;
+        height: 5px;
     }
 }

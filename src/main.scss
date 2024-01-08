@@ -30,6 +30,8 @@ section {
 
 // GENERAL SASS
 
+// Homepage
+
 .navbar-custom {
     min-height: $navbar-height;
     padding: 10px 0; // content in nav moves up slightly when expanding dropdown on mobile view. this does not happen when min-height is not set or nav padding overridden
@@ -107,3 +109,9 @@ section {
         height: 5px;
     }
 }
+
+// End homepage
+
+
+// Subpages
+

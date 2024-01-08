@@ -96,6 +96,9 @@ section {
         flex-direction: column;
         .card-btn {
             margin-top: auto;
+            background-color: #c7b6fc;
+            color: black;
+            border: 0px;
         }
     }
 }
@@ -114,3 +117,8 @@ section {
 
 
 // Subpages
+
+.work-img-container {
+    display: flex;
+    justify-content: center;
+}

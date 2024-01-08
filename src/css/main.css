@@ -58,6 +58,9 @@ section {
 }
 .card .card-body .card-btn {
   margin-top: auto;
+  background-color: #c7b6fc;
+  color: black;
+  border: 0px;
 }
 
 .footer-container {
@@ -68,4 +71,9 @@ section {
   width: 60px;
   background-color: #dbd0fb;
   height: 5px;
+}
+
+.work-img-container {
+  display: flex;
+  justify-content: center;
 }

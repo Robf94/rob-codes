@@ -3,16 +3,13 @@
 $section-margin: 20px;
 $footer-padding: 20px;
 $card-height: 100%;
-$navbar-height: 50px;
+$navbar-height: 60px;
 $header-footer-color: #f8f9fa;
 
+// END VARIABLES
+
+
 // RESETS
-
-// * {
-//     box-sizing: border-box;
-// }
-
-// Bootstrap is border box by default
 
 body {
     margin: 0;
@@ -22,59 +19,28 @@ body {
 // END RESETS
 
 
-
 // UNIVERSAL BEHAVIOUR
 
 section {
     scroll-margin-top: $navbar-height; // Pads the anchor to sections down to compensate for fixed navbar
-    //     .section-headings {
-    //     margin: 20px;
-    // }
 }
 
 // END UNIVERSAL BEHAVIOUR
 
-// .navbar-custom {
-//     height: $navbar-height;
-// }
 
-// setting height of navbar manually messes up dropdown background. Need to determine how to match the height of navbar set by bootstrap in order to pad content down to match navbar height
+// GENERAL SASS
 
-.header-logo {
-    width: 100px;
-    // slightly increases navbar height, remove image for now
-}
-
-.carousel-container {
-    .gradient {
-        position:absolute;
-        height: 100%;
-        width: 100%;
-        background-image: linear-gradient(to top, black, transparent 40%);
-    }
-    .carousel-item {
-        height: calc(100vh - $navbar-height);
-    }
-    .c-img {
-        object-fit: cover;
-        height: 100%;
-        width: 100%;
+.navbar-custom {
+    min-height: $navbar-height;
+    // padding: 10px 0; // content in nav moves up slightly when expanding dropdown on mobile view. this does not happen when min-height is not set or nav padding overridden
+    .header-logo {
+        height: 30px;
+        // slightly increases navbar height, remove image for now
     }
 }
 
-.card {
-    height: $card-height; // seems to mess up vertical spacing
-    .card-img-fit {
-        aspect-ratio: 5 / 3;
-        object-fit: contain;
-    }
-    .card-body {
-        display: flex;
-        flex-direction: column;
-        .card-btn {
-            margin-top: auto;
-        }
-    }
+#my-projects, #say-hello, #get-in-touch {
+    margin: $section-margin;
 }
 
 #about-me {
@@ -101,9 +67,39 @@ section {
     }
 }
 
-#my-projects, #say-hello, #get-in-touch {
-    margin: $section-margin;
+// .carousel-container {
+//     .gradient {
+//         position:absolute;
+//         height: 100%;
+//         width: 100%;
+//         background-image: linear-gradient(to top, black, transparent 40%);
+//     }
+//     .carousel-item {
+//         height: calc(100vh - $navbar-height);
+//     }
+//     .c-img {
+//         object-fit: cover;
+//         height: 100%;
+//         width: 100%;
+//     }
+// }
+
+.card {
+    height: $card-height; // seems to mess up vertical spacing
+    .card-img-fit {
+        aspect-ratio: 5 / 3;
+        object-fit: contain;
+    }
+    .card-body {
+        display: flex;
+        flex-direction: column;
+        .card-btn {
+            margin-top: auto;
+        }
+    }
 }
+
+
 
 .footer-container {
     padding: $footer-padding;

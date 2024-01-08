@@ -1,51 +1,26 @@
 body {
   margin: 0;
-  padding-top: 50px;
+  padding-top: 60px;
 }
 
 section {
-  scroll-margin-top: 50px;
+  scroll-margin-top: 60px;
 }
 
-.header-logo {
-  width: 100px;
+.navbar-custom {
+  min-height: 60px;
+}
+.navbar-custom .header-logo {
+  height: 30px;
 }
 
-.carousel-container .gradient {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background-image: linear-gradient(to top, black, transparent 40%);
-}
-.carousel-container .carousel-item {
-  height: calc(100vh - 50px);
-}
-.carousel-container .c-img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  height: 100%;
-  width: 100%;
-}
-
-.card {
-  height: 100%;
-}
-.card .card-img-fit {
-  aspect-ratio: 5/3;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-.card .card-body {
-  display: flex;
-  flex-direction: column;
-}
-.card .card-body .card-btn {
-  margin-top: auto;
+#my-projects, #say-hello, #get-in-touch {
+  margin: 20px;
 }
 
 #about-me {
   background-color: #dbd0fb;
-  height: calc(100vh - 50px);
+  height: calc(100vh - 60px);
 }
 #about-me .row-about {
   align-items: center;
@@ -69,8 +44,20 @@ section {
   border-radius: 50%;
 }
 
-#my-projects, #say-hello, #get-in-touch {
-  margin: 20px;
+.card {
+  height: 100%;
+}
+.card .card-img-fit {
+  aspect-ratio: 5/3;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.card .card-body {
+  display: flex;
+  flex-direction: column;
+}
+.card .card-body .card-btn {
+  margin-top: auto;
 }
 
 .footer-container {

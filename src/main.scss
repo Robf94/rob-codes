@@ -9,6 +9,16 @@ $header-footer-color: #f8f9fa;
 // END VARIABLES
 
 
+// MIXINS
+
+@mixin button-styling {
+    margin-top: auto;
+    background-color: #dbd0fb;
+    color: black;
+    border: 0px;
+}
+
+
 // RESETS
 
 body {
@@ -40,7 +50,7 @@ section {
     }
 }
 
-#my-projects, #say-hello, #get-in-touch, #work-subpages {
+.homepage-main-section {
     margin: $section-margin;
 }
 
@@ -94,11 +104,8 @@ section {
     .card-body {
         display: flex;
         flex-direction: column;
-        .card-btn {
-            margin-top: auto;
-            background-color: #c7b6fc;
-            color: black;
-            border: 0px;
+        .custom-btn {
+            @include button-styling();
         }
     }
 }
@@ -118,7 +125,14 @@ section {
 
 // Subpages
 
-.work-img-container {
-    display: flex;
-    justify-content: center;
+
+.subpages-main {
+    margin: $section-margin;
+    .custom-btn {
+        @include button-styling();
+    }
+    .work-img-container {
+        display: flex;
+        justify-content: center;
+    }
 }

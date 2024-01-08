@@ -14,7 +14,7 @@ section {
   height: 30px;
 }
 
-#my-projects, #say-hello, #get-in-touch, #work-subpages {
+.homepage-main-section {
   margin: 20px;
 }
 
@@ -56,9 +56,9 @@ section {
   display: flex;
   flex-direction: column;
 }
-.card .card-body .card-btn {
+.card .card-body .custom-btn {
   margin-top: auto;
-  background-color: #c7b6fc;
+  background-color: #dbd0fb;
   color: black;
   border: 0px;
 }
@@ -73,7 +73,16 @@ section {
   height: 5px;
 }
 
-.work-img-container {
+.subpages-main {
+  margin: 20px;
+}
+.subpages-main .custom-btn {
+  margin-top: auto;
+  background-color: #dbd0fb;
+  color: black;
+  border: 0px;
+}
+.subpages-main .work-img-container {
   display: flex;
   justify-content: center;
 }

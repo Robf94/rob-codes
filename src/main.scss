@@ -6,6 +6,9 @@ $card-height: 100%;
 $navbar-height: 60px;
 $header-footer-color: #f8f9fa;
 
+$primary-color: #539e8a;
+$secondary-color: #f4c4bd;
+
 // END VARIABLES
 
 
@@ -13,7 +16,8 @@ $header-footer-color: #f8f9fa;
 
 @mixin button-styling {
     margin-top: auto;
-    background-color: #dbd0fb;
+    // background-color: #dbd0fb;
+    background-color: #f4c4bd;
     color: black;
     border: 0px;
 }
@@ -58,8 +62,11 @@ section {
     .row-about {
         align-items: center;
         justify-content: space-around;
+        color: $secondary-color;
     }
-    background-color: #dbd0fb;
+    // background-color: #dbd0fb;
+    background-color: $primary-color;
+
     height: calc(100vh - $navbar-height);
     .txt-container {
         display: flex;
@@ -86,7 +93,8 @@ section {
 //         background-image: linear-gradient(to top, black, transparent 40%);
 //     }
 //     .carousel-item {
-//         height: calc(100vh - $navbar-height);
+//         height: 500px;
+//         width: 100%;
 //     }
 //     .c-img {
 //         object-fit: cover;
@@ -128,11 +136,48 @@ section {
 
 .subpages-main {
     margin: $section-margin;
-    .custom-btn {
-        @include button-styling();
+    .work-title-container {
+        margin-bottom: $section-margin;
+        .custom-btn {
+            @include button-styling();
+        }
     }
+
+
     .work-img-container {
-        display: flex;
-        justify-content: center;
+        // width:100%;
+        height: 500px;
+        position: relative;
+
+        .gradient {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            background-image: linear-gradient(to top, black, transparent 40%);
+        }
+
+        #booki-desktop-img {
+            display: block;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: 50% 0;
+        }
+    }
+
+    // .gradient {
+    // position: absolute;
+    // background-image: linear-gradient(to top, black, transparent 40%);
+    // z-index: 100;
+    // }
+
+    #booki-desktop-img {
+        // height: 50%;
+        // object-fit: cover;
+        // object-position: 50% 0;
+        position: relative;
+        display: inline-block;
+        z-index: -10;
     }
 }
+

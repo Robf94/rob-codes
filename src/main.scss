@@ -30,6 +30,7 @@ $dark-bg-text-color: #fae2de;
 body {
     margin: 0;
     // padding-top: $navbar-height; // removed after changing nav to sticky from fixed
+    font-family: "Source Sans 3", sans-serif;
 }
 
 // END RESETS
@@ -51,6 +52,7 @@ section {
 .navbar-custom {
     min-height: $navbar-height;
     padding: 10px 0; // content in nav moves up slightly when expanding dropdown on mobile view. this does not happen when min-height is not set or nav padding overridden
+    background-color: $primary-color !important;
     .header-logo {
         height: 30px;
     }

@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  font-family: "Source Sans 3", sans-serif;
 }
 
 section {
@@ -9,6 +10,7 @@ section {
 .navbar-custom {
   min-height: 60px;
   padding: 10px 0;
+  background-color: #539e8a !important;
 }
 .navbar-custom .header-logo {
   height: 30px;

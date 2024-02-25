@@ -10,18 +10,10 @@ $primary-color: #539e8a;
 $secondary-color: #f6c5be;
 $dark-bg-text-color: #fae2de;
 
+$primary-color: #539e8a;
+$secondary-color: #f4c4bd;
+
 // END VARIABLES
-
-
-// MIXINS
-
-@mixin button-styling {
-    margin-top: auto;
-    // background-color: #dbd0fb;
-    // background-color: $secondary-color;
-    color: black;
-    border: 0px;
-}
 
 
 // RESETS
@@ -63,9 +55,6 @@ section {
     .row-about {
         align-items: center;
         justify-content: space-around;
-        color: $dark-bg-text-color;
-        // color: $secondary-color;
-        // adjust font sizing
     }
     // background-color: #dbd0fb;
     background-color: $primary-color;
@@ -135,6 +124,17 @@ section {
 
 
 // Subpages
+
+
+.subpages-main {
+    margin: $section-margin;
+    .work-title-container {
+        margin-bottom: $section-margin;
+        .custom-btn {
+            @include button-styling();
+        }
+    }
+
 
 
 .subpages-main {

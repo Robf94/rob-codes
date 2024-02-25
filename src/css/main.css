@@ -25,6 +25,7 @@ section {
 #about-me .row-about {
   align-items: center;
   justify-content: space-around;
+  color: #fae2de;
 }
 #about-me .txt-container {
   display: flex;
@@ -58,8 +59,8 @@ section {
 }
 .card .card-body .custom-btn {
   margin-top: auto;
-  background-color: #c7b6fc;
-  color: black;
+  background-color: #539e8a;
+  color: #fae2de;
   border: 0px;
 }
 
@@ -73,7 +74,39 @@ section {
   height: 5px;
 }
 
-.work-img-container {
-  display: flex;
-  justify-content: center;
+.subpages-main {
+  margin: 20px;
+}
+.subpages-main .work-title-container {
+  margin-bottom: 20px;
+}
+.subpages-main .work-title-container .custom-btn {
+  margin-top: auto;
+  background-color: #539e8a;
+  color: #fae2de;
+  border: 0px;
+}
+.subpages-main .work-img-container {
+  height: 500px;
+  position: relative;
+}
+.subpages-main .work-img-container .gradient {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-image: linear-gradient(to top, black, transparent 40%);
+}
+.subpages-main .work-img-container #booki-desktop-img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 0;
+     object-position: 50% 0;
+}
+.subpages-main #booki-desktop-img {
+  position: relative;
+  display: inline-block;
+  z-index: -10;
 }

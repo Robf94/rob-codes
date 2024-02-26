@@ -1,3 +1,13 @@
+.custom-btn {
+  margin-top: auto;
+  background-color: #539e8a;
+  color: #fae2de;
+  border: 0px;
+}
+.custom-btn:hover {
+  background-color: rgba(83, 158, 138, 0.8588235294);
+}
+
 body {
   margin: 0;
   font-family: "Source Sans 3", sans-serif;
@@ -59,12 +69,6 @@ section {
   display: flex;
   flex-direction: column;
 }
-.card .card-body .custom-btn {
-  margin-top: auto;
-  background-color: #539e8a;
-  color: #fae2de;
-  border: 0px;
-}
 
 .footer-container {
   padding: 20px;
@@ -82,33 +86,22 @@ section {
 .subpages-main .work-title-container {
   margin-bottom: 20px;
 }
-.subpages-main .work-title-container .custom-btn {
-  margin-top: auto;
-  background-color: #539e8a;
-  color: #fae2de;
-  border: 0px;
-}
-.subpages-main .work-img-container {
-  height: 500px;
-  position: relative;
-}
-.subpages-main .work-img-container .gradient {
+.subpages-main .carousel-container .gradient {
+  position: absolute;
   height: 100%;
   width: 100%;
-  position: absolute;
   background-image: linear-gradient(to top, black, transparent 40%);
 }
-.subpages-main .work-img-container #booki-desktop-img {
-  display: block;
-  height: 100%;
+.subpages-main .carousel-container .carousel-item {
+  height: 500px;
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: 50% 0;
-     object-position: 50% 0;
 }
-.subpages-main #booki-desktop-img {
-  position: relative;
-  display: inline-block;
-  z-index: -10;
+.subpages-main .carousel-container .c-img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: 100%;
+}
+.subpages-main .work-img-container .gradient {
+  position: absolute;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.708), transparent 30%);
 }

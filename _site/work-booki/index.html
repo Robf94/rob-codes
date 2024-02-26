@@ -40,8 +40,7 @@
 
         <div class="row">
             <div class="col-12 work-title-container">
-                <h2 class="section-headings">Booki</h2>
-                <a class="btn btn-primary custom-btn" href="https://robf94.github.io/booki-homepage/" target="_blank" rel="noopener noreferrer nofollow">View Project</a>
+                <h2 class="section-headings">Booki</h2> <!--Nunjucks will pass the title from line 3-->
             </div>
         </div>
     
@@ -51,38 +50,32 @@
 
                 <div class="gradient"></div>
 
-                <img src="../assets/booki/Screenshots/booki-desktop.png" class="d-block w-100 c-img img-fluid" id="booki-desktop-img" alt="Booki Desktop">
-
-                <!-- <div id="carouselExampleAutoplaying" class="carousel slide carousel-container" data-bs-ride="carousel">
+                <div id="carouselExampleAutoplaying" class="carousel slide carousel-container" data-bs-ride="carousel">
                     <div class="carousel-inner">
             
-                    <div class="carousel-item active">
-                        <div class="gradient"></div>
-                        <img src="../assets/booki/Screenshots/booki-desktop.png" class="d-block w-100 c-img img-fluid" alt="Booki Desktop">  <-- Seem to have issues with filepaths in subpages
-
-                        <div class="carousel-caption d-none d-md-block">
-                        <h5>lorem ipsum</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt quisquam voluptatibus, nemo dolor veniam voluptas facere voluptates, eaque architecto eligendi id cupiditate blanditiis veritatis temporibus ipsum vel minima. Cupiditate, delectus.</p>
+                        <div class="carousel-item active">
+                            <div class="gradient"></div>
+                            <img src="../assets/booki/Screenshots/booki-desktop.png" class="d-block w-100 c-img img-fluid desktop-screenshot" alt="Booki Desktop">  
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Desktop Layout</h5>
+                            </div>
                         </div>
-                    </div>
             
-                    <div class="carousel-item">
-                        <div class="gradient"></div>
-                        <img src="https://images.unsplash.com/photo-1700730025710-58ff304c1c8b?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block w-100 c-img" alt="Placeholder">
-                        <div class="carousel-caption d-none d-md-block">
-                        <h5>lorem ipsum</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt quisquam voluptatibus, nemo dolor veniam voluptas facere voluptates, eaque architecto eligendi id cupiditate blanditiis veritatis temporibus ipsum vel minima. Cupiditate, delectus.</p>
-                        </div>
-                    </div>
+                        <!-- <div class="carousel-item">
+                            <div class="gradient"></div>
+                            <img src="../assets/booki/Screenshots/booki-tablet-1.png" class="d-block w-100 c-img img-fluid tablet-screenshot" alt="Placeholder">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Tablet Layout</h5>
+                            </div>
+                        </div> -->
             
-                    <div class="carousel-item">
-                        <div class="gradient"></div>
-                        <img src="https://images.unsplash.com/photo-1636969423277-8757e3f2cf99?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDl8fHxlbnwwfHx8fHw%3D" class="d-block w-100 c-img" alt="Placeholder">
-                        <div class="carousel-caption d-none d-md-block">
-                        <h5>lorem ipsum</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt quisquam voluptatibus, nemo dolor veniam voluptas facere voluptates, eaque architecto eligendi id cupiditate blanditiis veritatis temporibus ipsum vel minima. Cupiditate, delectus.</p>
+                        <div class="carousel-item">
+                            <div class="gradient"></div>
+                            <img src="/assets/booki/Screenshots/mobile-collage.jpg" class="d-block w-100 c-img img-fluid mobile-screenshot" alt="Placeholder">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Mobile Layout</h5>
+                            </div>
                         </div>
-                    </div>
             
                     </div>
             
@@ -95,15 +88,17 @@
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                     </button>
+
+                    <!-- Style buttons so visible -->
             
-                </div> -->
+                </div>
             </div>
 
             <div class="col-12 col-md-6">
 
                 <div class="desc-container">
-                    <h3 class="section-headings">Short Description</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium eum veritatis laboriosam corporis quam, corrupti illo labore fuga suscipit rem obcaecati. Reiciendis molestias deserunt, odio facere quas explicabo aut quam!</p>
+                    <h3 class="section-headings">About</h3>
+                    <p>My very first project involving in front-end development. I was tasked to recreate a homepage for a hotel booking website based on mockups provided. To achieve this, I used HTML and vanilla CSS. I utilised flexbox to achieve a responsive layout between mobile, tablet and desktop.</p>
                 </div>
 
                 <div class="skills-container">
@@ -114,6 +109,10 @@
                         <li>Flexbox</li>
                     </ul>
                 </div>
+
+                <a class="btn btn-primary custom-btn" href="https://robf94.github.io/booki-homepage/" target="_blank" rel="noopener noreferrer nofollow">View Project</a>
+
+                <!-- Change order for mobile view using MQs - description and skills at top of page, carousel below -->
 
             </div>
 

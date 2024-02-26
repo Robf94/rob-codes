@@ -10,18 +10,60 @@ $primary-color: #539e8a;
 $secondary-color: #f6c5be;
 $dark-bg-text-color: #fae2de;
 
+$hover-color: #539e8adb;
+
 // END VARIABLES
 
+// GLOBAL ELEMENTS
 
-// MIXINS
-
-@mixin button-styling {
+.custom-btn { // Styles all buttons uniformly throughout portfolio
     margin-top: auto;
     // background-color: #dbd0fb;
     // background-color: $secondary-color;
     background-color: $primary-color;
     color: $dark-bg-text-color;
     border: 0px;
+    &:hover {
+        background-color: $hover-color;
+    }
+}
+
+// END GLOBAL ELEMENTS
+
+
+// MIXINS
+
+// @mixin button-styling {
+//     margin-top: auto;
+//     // background-color: #dbd0fb;
+//     // background-color: $secondary-color;
+//     background-color: $primary-color;
+//     color: $dark-bg-text-color;
+//     border: 0px;
+//     &:hover {
+//         background-color: $hover-color;
+//     }
+// }
+
+// Used global button style (see global elements) this applies styling to all buttons with class 'custom-btn', negates the need for a mixin and duplicate code below
+
+@mixin carousel-styling {
+    // Tweak width at a later date
+    .gradient {
+        position:absolute;
+        height: 100%;
+        width: 100%;
+        background-image: linear-gradient(to top, black, transparent 40%);
+    }
+    .carousel-item {
+        height: 500px;
+        width: 100%;
+    }
+    .c-img {
+        object-fit:contain;
+        height: 100%;
+        // width: 100%;
+    }
 }
 
 
@@ -91,24 +133,6 @@ section {
     }
 }
 
-// .carousel-container {
-//     .gradient {
-//         position:absolute;
-//         height: 100%;
-//         width: 100%;
-//         background-image: linear-gradient(to top, black, transparent 40%);
-//     }
-//     .carousel-item {
-//         height: 500px;
-//         width: 100%;
-//     }
-//     .c-img {
-//         object-fit: cover;
-//         height: 100%;
-//         width: 100%;
-//     }
-// }
-
 .card {
     height: $card-height; // seems to mess up vertical spacing
     .card-img-fit {
@@ -118,9 +142,10 @@ section {
     .card-body {
         display: flex;
         flex-direction: column;
-        .custom-btn {
-            @include button-styling();
-        }
+        // .custom-btn {
+        //     @include button-styling();
+        // }
+        // Remove after creating global styling
     }
 }
 
@@ -144,46 +169,42 @@ section {
     margin: $section-margin;
     .work-title-container {
         margin-bottom: $section-margin;
-        .custom-btn {
-            @include button-styling();
-        }
     }
 
-
+    .carousel-container {
+        @include carousel-styling();
+    }
+    
     .work-img-container {
-        // width:100%;
-        height: 500px;
-        position: relative;
+        // height: 500px;
+        // position: relative;
 
         .gradient {
-            height: 100%;
-            width: 100%;
+            // height: 100%;
+            // width: inherit;
             position: absolute;
-            background-image: linear-gradient(to top, black, transparent 40%);
+            background-image: linear-gradient(to top, rgba(0, 0, 0, 0.708), transparent 30%);
         }
 
-        #booki-desktop-img {
-            display: block;
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
-            object-position: 50% 0;
-        }
+        // #booki-desktop-img {
+        //     display: block;
+        //     height: 100%;
+        //     width: 100%;
+        //     object-fit: cover;
+        //     object-position: 50% 0;
+        // }
     }
-
-    // .gradient {
-    // position: absolute;
-    // background-image: linear-gradient(to top, black, transparent 40%);
-    // z-index: 100;
+    // .custom-btn {
+    //     @include button-styling();
     // }
-
-    #booki-desktop-img {
-        // height: 50%;
-        // object-fit: cover;
-        // object-position: 50% 0;
-        position: relative;
-        display: inline-block;
-        z-index: -10;
-    }
+    // Remove after creating global styling
 }
 
+// END GENERAL SASS
+
+
+// MEDIA QUERIES
+
+
+
+// END MEDIA QUERIES

@@ -141,29 +141,30 @@ pageTitle: "Home"
   </section> -->
 
   <section class="homepage-main-section" id="get-in-touch">
-
+    <!-- ADD HONEYPOT -->
+    <!-- Style as card with drop shadow? -->
     <h2 class="section-headings">Get in touch</h2>
 
     <form name="contact" method="POST" data-netlify="true" onSubmit="submit">
 
-      <div class="form-floating col-md-6 mt-3">
+      <div class="form-floating col-md-4 mt-3">
         <input type="text" class="form-control" id="name" name="name" placeholder="Your Name">
         <label for="name">Your Name</label>
       </div>
 
-      <div class="form-floating col-md-6 mt-3">
+      <div class="form-floating col-md-4 mt-3">
         <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com">
         <label for="email">Email Address</label>
       </div>
 
-      <div class="form-floating col-md-6 mt-3">
-        <textarea name="message" class="form-control" placeholder="Leave a comment here" id="floatingTextArea"></textarea>
+      <div class="form-floating col-md-4 mt-3">
+        <textarea name="message" class="form-control message-input-box" placeholder="Leave a comment here" id="floatingTextArea"></textarea>
         <label for="message">Say Hello!</label>
       </div>
-
-      <!-- Message not being submitted to netlify but name and email fields are. Firgure out why this is happening -->
       
-      <button class="form_submit btn btn-primary custom-btn" id="form-submit-btn" type="submit">Send</button>
+      <button class="form_submit btn btn-primary custom-btn col-12 col-md-1 mt-3" id="form-submit-btn" type="submit">
+        <span>Send</span>
+      </button>
 
   </form>
 </section>

@@ -77,6 +77,10 @@ section {
   flex-direction: column;
 }
 
+#get-in-touch .message-input-box {
+  height: 150px;
+}
+
 .footer-container {
   padding: 20px;
   background-color: #f8f9fa;

@@ -18,14 +18,19 @@ $hover-color: #539e8adb;
 
 .custom-btn { // Styles all buttons uniformly throughout portfolio
     margin-top: auto;
-    // background-color: #dbd0fb;
-    // background-color: $secondary-color;
     background-color: $primary-color;
     color: $dark-bg-text-color;
     border: 0px;
     &:hover {
         background-color: $hover-color;
     }
+    &:active {
+        background-color: $secondary-color !important;
+    }
+}
+
+#form-submit-btn {
+    margin-top: 1rem;
 }
 
 // END GLOBAL ELEMENTS

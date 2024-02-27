@@ -7,6 +7,13 @@
 .custom-btn:hover {
   background-color: rgba(83, 158, 138, 0.8588235294);
 }
+.custom-btn:active {
+  background-color: #f6c5be !important;
+}
+
+#form-submit-btn {
+  margin-top: 1rem;
+}
 
 body {
   margin: 0;

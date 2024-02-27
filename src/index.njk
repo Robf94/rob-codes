@@ -157,9 +157,11 @@ pageTitle: "Home"
       </div>
 
       <div class="form-floating col-md-6 mt-3">
-        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextArea"></textarea>
-        <label for="floatingTextArea">Say Hello!</label>
+        <textarea name="message" class="form-control" placeholder="Leave a comment here" id="floatingTextArea"></textarea>
+        <label for="message">Say Hello!</label>
       </div>
+
+      <!-- Message not being submitted to netlify but name and email fields are. Firgure out why this is happening -->
       
       <button class="form_submit btn btn-primary custom-btn" id="form-submit-btn" type="submit">Send</button>
 

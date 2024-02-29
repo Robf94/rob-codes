@@ -1,7 +1,4 @@
-<!-- Copy default.njk code but make sure that navbar links direct back to homepage titles -->
-
 {% extends "default.njk" %}
-{# This inherits the default.njk template to use html head and body #}
 
 {% block navLinks %}
     <a class="nav-link" href="/#about-me">About Me</a>
@@ -9,4 +6,4 @@
     <a class="nav-link" href="/#get-in-touch">Get in touch</a>
 {% endblock %}
 
-{# This works!!! It does what I want it to do. Transfer to work subpages and make sure template inheritance is all dandy #}
+{# For some reason the output breaks when I try to merge work-subpages.njk and work-content.njk together, so they will remain separate. #}

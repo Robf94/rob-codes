@@ -4,9 +4,10 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/assets");
   eleventyConfig.addPassthroughCopy("./src/css/main.css");
 
-  // Get current year NOTE lowercase "c" in "addShortcode" - took me about 30 minutes to realise this was throwing an error...
+  // Get current year
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 
+  // Specify the input, output, includes, and data directories
   return {
     dir: {
       input: "src",
@@ -14,6 +15,11 @@ module.exports = function(eleventyConfig) {
       data: "_data",
       output: "_site",
     },
+    // Set Nunjucks as the HTML template engine
     HTMLTemplateEngine: 'njk',
+    // Specify that Nunjucks includes should have the .njk extension
+    markdownTemplateEngine: 'njk',
+    // Add additional directories or files to watch for changes
+    addWatchTarget: "./src/_data",
   };
 };

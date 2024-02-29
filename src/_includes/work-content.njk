@@ -1,9 +1,8 @@
 ---
-layout: "work-subpages.njk"
-pageTitle: Booki
+layout: work-subpages.njk
 ---
 
-<section class="subpages-main" id="booki-main">
+<section class="subpages-main" id="{{pageId}}">
 
     <div class="container-fluid">
 
@@ -24,15 +23,17 @@ pageTitle: Booki
             
                         <div class="carousel-item active">
                             <div class="gradient"></div> <!-- hide gradient in mobile view? -->
-                            <img src="../assets/booki/Screenshots/booki-desktop.png" class="d-block w-100 c-img img-fluid desktop-screenshot" alt="Booki Desktop">  
+                            <img src="{{ desktopScreenshot }}" class="d-block w-100 c-img img-fluid desktop-screenshot" alt="Booki Desktop">  
                             <div class="carousel-caption d-none d-md-block">
                                 <h5>Desktop Layout</h5>
                             </div>
                         </div>
+
+                        {# is there a way to show/hide amount of carousel items per page using nunjucks? #}
             
                         <!-- <div class="carousel-item">
                             <div class="gradient"></div>
-                            <img src="../assets/booki/Screenshots/booki-tablet-1.png" class="d-block w-100 c-img img-fluid tablet-screenshot" alt="Placeholder">
+                            <img src="{{ tabletScreenshot }}" class="d-block w-100 c-img img-fluid tablet-screenshot" alt="Placeholder">
                             <div class="carousel-caption d-none d-md-block">
                                 <h5>Tablet Layout</h5>
                             </div>
@@ -40,7 +41,7 @@ pageTitle: Booki
             
                         <div class="carousel-item">
                             <div class="gradient"></div>
-                            <img src="/assets/booki/Screenshots/mobile-collage.jpg" class="d-block w-100 c-img img-fluid mobile-screenshot" alt="Placeholder">
+                            <img src="{{ mobileScreenshot }}" class="d-block w-100 c-img img-fluid mobile-screenshot" alt="Placeholder">
                             <div class="carousel-caption d-none d-md-block">
                                 <h5>Mobile Layout</h5>
                             </div>
@@ -67,19 +68,19 @@ pageTitle: Booki
 
                 <div class="desc-container">
                     <h3 class="section-headings">About</h3>
-                    <p>My very first project involving in front-end development. I was tasked to recreate a homepage for a hotel booking website based on mockups provided. To achieve this, I used HTML and vanilla CSS. I utilised flexbox to achieve a responsive layout between mobile, tablet and desktop.</p>
+                    <p>{{ aboutContent }}</p>
                 </div>
 
                 <div class="skills-container">
                     <h3>Skills Learned</h3>
                     <ul>
-                        <li>Semantic HTML</li>
-                        <li>CSS</li>
-                        <li>Flexbox</li>
+                        {% for skill in skills %}
+                            <li>{{ skill }}</li>
+                        {% endfor %}
                     </ul>
                 </div>
 
-                <a class="btn btn-primary custom-btn" href="https://robf94.github.io/booki-homepage/" target="_blank" rel="noopener noreferrer nofollow">View Project</a>
+                <a class="btn btn-primary custom-btn" href="{{ projectLink }}" target="_blank" rel="noopener noreferrer nofollow">View Project</a>
 
                 <!-- Change order for mobile view using MQs - description and skills at top of page, carousel below -->
 

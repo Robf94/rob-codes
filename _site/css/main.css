@@ -1,3 +1,9 @@
+body {
+  margin: 0px;
+  height: 100%;
+  font-family: "Source Sans 3", sans-serif;
+}
+
 .custom-btn {
   margin-top: auto;
   background-color: #539e8a;
@@ -15,9 +21,15 @@
   margin-top: 1rem;
 }
 
-body {
-  margin: 0;
-  font-family: "Source Sans 3", sans-serif;
+footer {
+  padding: 20px;
+  background-color: #539e8a;
+  color: #fae2de;
+}
+footer hr {
+  width: 60px;
+  background-color: #f6c5be;
+  height: 5px;
 }
 
 section {
@@ -28,6 +40,9 @@ section {
   min-height: 60px;
   padding: 10px 0;
   background-color: #539e8a !important;
+}
+.navbar-custom .nav-link {
+  color: #fae2de;
 }
 .navbar-custom .header-logo {
   height: 30px;
@@ -79,16 +94,6 @@ section {
 
 #get-in-touch .message-input-box {
   height: 150px;
-}
-
-.footer-container {
-  padding: 20px;
-  background-color: #f8f9fa;
-}
-.footer-container hr {
-  width: 60px;
-  background-color: #dbd0fb;
-  height: 5px;
 }
 
 .subpages-main {

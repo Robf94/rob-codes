@@ -1,3 +1,14 @@
+// RESETS
+
+body {
+    margin: 0px;
+    height: 100%;
+    font-family: "Source Sans 3", sans-serif;
+}
+
+// END RESETS
+
+
 // VARIABLES
 
 $section-margin: 20px;
@@ -16,6 +27,15 @@ $hover-color: #539e8adb;
 
 // GLOBAL ELEMENTS
 
+// #container-wrapper {
+//     min-height: 70vh;
+// }
+
+// #main {
+//     overflow: auto;
+//     padding-bottom: 50px;
+// }
+
 .custom-btn { // Styles all buttons uniformly throughout portfolio
     margin-top: auto;
     background-color: $primary-color;
@@ -33,24 +53,21 @@ $hover-color: #539e8adb;
     margin-top: 1rem;
 }
 
+footer {
+    padding: $footer-padding;
+    background-color: $primary-color;
+    color: $dark-bg-text-color;
+    hr {
+        width: 60px;
+        background-color: $secondary-color;
+        height: 5px;
+    }
+}
+
 // END GLOBAL ELEMENTS
 
 
 // MIXINS
-
-// @mixin button-styling {
-//     margin-top: auto;
-//     // background-color: #dbd0fb;
-//     // background-color: $secondary-color;
-//     background-color: $primary-color;
-//     color: $dark-bg-text-color;
-//     border: 0px;
-//     &:hover {
-//         background-color: $hover-color;
-//     }
-// }
-
-// Used global button style (see global elements) this applies styling to all buttons with class 'custom-btn', negates the need for a mixin and duplicate code below
 
 @mixin carousel-styling {
     // Tweak width at a later date
@@ -72,17 +89,6 @@ $hover-color: #539e8adb;
 }
 
 
-// RESETS
-
-body {
-    margin: 0;
-    // padding-top: $navbar-height; // removed after changing nav to sticky from fixed
-    font-family: "Source Sans 3", sans-serif;
-}
-
-// END RESETS
-
-
 // UNIVERSAL BEHAVIOUR
 
 section {
@@ -100,6 +106,9 @@ section {
     min-height: $navbar-height;
     padding: 10px 0; // content in nav moves up slightly when expanding dropdown on mobile view. this does not happen when min-height is not set or nav padding overridden
     background-color: $primary-color !important;
+    .nav-link {
+        color: $dark-bg-text-color;
+    }
     .header-logo {
         height: 30px;
     }
@@ -114,12 +123,9 @@ section {
         align-items: center;
         justify-content: space-around;
         color: $dark-bg-text-color;
-        // color: $secondary-color;
         // adjust font sizing
     }
-    // background-color: #dbd0fb;
     background-color: $primary-color;
-
     height: calc(100vh - $navbar-height);
     .txt-container {
         display: flex;
@@ -147,26 +153,12 @@ section {
     .card-body {
         display: flex;
         flex-direction: column;
-        // .custom-btn {
-        //     @include button-styling();
-        // }
-        // Remove after creating global styling
     }
 }
 
 #get-in-touch {
     .message-input-box {
         height: 150px;
-    }
-}
-
-.footer-container {
-    padding: $footer-padding;
-    background-color: #f8f9fa;
-    hr {
-        width: 60px;
-        background-color: #dbd0fb;
-        height: 5px;
     }
 }
 
@@ -205,10 +197,6 @@ section {
         //     object-position: 50% 0;
         // }
     }
-    // .custom-btn {
-    //     @include button-styling();
-    // }
-    // Remove after creating global styling
 }
 
 // END GENERAL SASS

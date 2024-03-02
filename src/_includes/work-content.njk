@@ -21,24 +21,27 @@ layout: work-subpages.njk
                 <div id="carouselExampleAutoplaying" class="carousel slide carousel-container" data-bs-ride="carousel">
                     <div class="carousel-inner">
             
+                        {% if desktopScreenshot %}
                         <div class="carousel-item active">
-                            <div class="gradient"></div> <!-- hide gradient in mobile view? -->
+                            <div class="gradient"></div>
                             <img src="{{ desktopScreenshot }}" class="d-block w-100 c-img img-fluid desktop-screenshot" alt="Desktop view of the {{ pageTitle }} {{ projectType }}">  
                             <div class="carousel-caption d-none d-md-block">
                                 <h5>Desktop Layout</h5>
                             </div>
                         </div>
+                        {% endif %}
 
-                        {# use JS to hide blank carousel containers? #}
-            
-                        {# <div class="carousel-item">
+                        {% if tabletScreenshot %}
+                        <div class="carousel-item">
                             <div class="gradient"></div>
                             <img src="{{ tabletScreenshot }}" class="d-block w-100 c-img img-fluid tablet-screenshot" alt="Tablet view of the {{ pageTitle }} {{ projectType }}">
                             <div class="carousel-caption d-none d-md-block">
                                 <h5>Tablet Layout</h5>
                             </div>
-                        </div> #}
-            
+                        </div>
+                        {% endif %}
+
+                        {% if mobileScreenshot %}
                         <div class="carousel-item">
                             <div class="gradient"></div>
                             <img src="{{ mobileScreenshot }}" class="d-block w-100 c-img img-fluid mobile-screenshot" alt="Mobile view of the {{ pageTitle }} {{ projectType }}">
@@ -46,6 +49,7 @@ layout: work-subpages.njk
                                 <h5>Mobile Layout</h5>
                             </div>
                         </div>
+                        {% endif %}
             
                     </div>
             

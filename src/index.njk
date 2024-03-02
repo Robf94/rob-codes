@@ -31,7 +31,7 @@ pageTitle: Home
   <div class="card-container row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-4 g-4">
 
     <div class="col">
-      <div class="card">
+      <div class="card border-0">
         <img src="./assets/pint/B870F3D1-79B0-4696-BF7E-410C1FB6B03D.png" class="card-img-top card-img-fit" alt="PINT Logo">
         <div class="card-body">
           <h5 class="card-title">People In Need Today</h5>
@@ -42,7 +42,7 @@ pageTitle: Home
     </div>
 
     <div class="col">
-      <div class="card">
+      <div class="card border-0">
         <img src="./assets/booki/Booki@3x.png" class="card-img-top card-img-fit" alt="Booki Logo">
         <div class="card-body">
           <h5 class="card-title">Booki</h5>
@@ -53,7 +53,7 @@ pageTitle: Home
     </div>
 
     <div class="col">
-      <div class="card">
+      <div class="card border-0">
         <img src="./assets/ohmyfood/ohmyfood.png" class="card-img-top card-img-fit card-img" alt="Ohmyfood Logo">
         <div class="card-body">
           <h5 class="card-title">Ohmyfood</h5>
@@ -64,7 +64,7 @@ pageTitle: Home
     </div>
 
     {# <div class="col">
-      <div class="card">
+      <div class="card border-0">
         <img src="https://images.unsplash.com/photo-1636969423277-8757e3f2cf99?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDl8fHxlbnwwfHx8fHw%3D" class="card-img-top card-img-fit" alt="...">
         <div class="card-body">
           <h5 class="card-title">Card title</h5>
@@ -78,29 +78,30 @@ pageTitle: Home
 
 </section>
 
-<section class="homepage-main-section" id="get-in-touch">
+<section class="homepage-main-section row" id="get-in-touch">
   <!-- Style as card with drop shadow? -->
   <h2 class="section-headings">Get in touch</h2>
 
-  <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" onSubmit="submit">
+  <form class="form-card col-md-6 col-lg-5" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" onSubmit="submit">
 
     <input class="d-none" name="bot-field">
-    <div class="form-floating col-md-4 mt-3">
+
+    <div class="form-floating col-md-4 mt-3 form-name w-100">
       <input type="text" class="form-control" id="name" name="name" placeholder="Your Name">
       <label for="name">Your Name</label>
     </div>
 
-    <div class="form-floating col-md-4 mt-3">
+    <div class="form-floating col-md-4 mt-3 w-100">
       <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com">
       <label for="email">Email Address</label>
     </div>
 
-    <div class="form-floating col-md-4 mt-3">
+    <div class="form-floating col-md-4 mt-3 w-100">
       <textarea name="message" class="form-control message-input-box" placeholder="Leave a comment here" id="floatingTextArea"></textarea>
       <label for="message">Say Hello!</label>
     </div>
     
-    <button class="form_submit btn btn-primary custom-btn col-12 col-md-1 mt-3" id="form-submit-btn" type="submit">
+    <button class="form_submit btn btn-primary custom-btn col-12 col-md-1 mt-3 w-100" id="form-submit-btn" type="submit">
       <span>Send</span>
     </button>
 

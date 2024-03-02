@@ -2,6 +2,7 @@ body {
   margin: 0px;
   height: 100%;
   font-family: "Source Sans 3", sans-serif;
+  background-color: rgb(242, 242, 242);
 }
 
 .custom-btn {
@@ -9,12 +10,20 @@ body {
   background-color: #539e8a;
   color: #fae2de;
   border: 0px;
+  border-radius: 50px;
+  box-shadow: 0px 10px 10px 0px rgba(197, 197, 197, 0.7019607843);
+  transition: 0.3s;
 }
 .custom-btn:hover {
   background-color: rgba(83, 158, 138, 0.8588235294);
+  transform: scale(0.98);
+  box-shadow: 0px 5px 5px 0 rgba(156, 156, 156, 0.7019607843);
 }
 .custom-btn:active {
   background-color: #f6c5be !important;
+  transform: scale(0.96);
+  transition: 0.1s;
+  box-shadow: 0px 3px 3px 0 rgba(125, 125, 125, 0.7019607843);
 }
 
 #form-submit-btn {
@@ -33,11 +42,10 @@ footer hr {
 }
 
 section {
-  scroll-margin-top: 60px;
+  scroll-margin-top: 80px;
 }
 
 .navbar-custom {
-  min-height: 60px;
   padding: 10px 0;
   background-color: #539e8a !important;
 }
@@ -61,6 +69,9 @@ section {
   justify-content: space-around;
   color: #fae2de;
 }
+#about-me .row-about p {
+  font-size: 20px;
+}
 #about-me .txt-container {
   display: flex;
   flex-direction: column;
@@ -79,20 +90,41 @@ section {
   border-radius: 50%;
 }
 
-.card {
-  height: 100%;
+.card-container {
+  justify-content: space-evenly;
 }
-.card .card-img-fit {
+.card-container .card {
+  height: 100%;
+  box-shadow: 0px 10px 10px 0px rgba(197, 197, 197, 0.7019607843);
+  transition: 0.3s;
+  border-radius: 20px;
+}
+.card-container .card .card-img-fit {
   aspect-ratio: 5/3;
   -o-object-fit: contain;
      object-fit: contain;
 }
-.card .card-body {
+.card-container .card .card-body {
   display: flex;
   flex-direction: column;
 }
+.card-container .card:hover {
+  transform: scale(0.98);
+  box-shadow: 0px 5px 5px 0 rgba(156, 156, 156, 0.7019607843);
+}
 
-#get-in-touch .message-input-box {
+.form-card {
+  padding: 20px;
+  box-shadow: 0px 10px 10px 0px rgba(197, 197, 197, 0.7019607843);
+  transition: 0.3s;
+  border-radius: 20px;
+  background-color: white;
+  margin: 0 auto;
+}
+.form-card .form-name {
+  margin: 0 !important;
+}
+.form-card .message-input-box {
   height: 150px;
 }
 

@@ -1,14 +1,3 @@
-// RESETS
-
-body {
-    margin: 0px;
-    height: 100%;
-    font-family: "Source Sans 3", sans-serif;
-}
-
-// END RESETS
-
-
 // VARIABLES
 
 $section-margin: 20px;
@@ -23,29 +12,55 @@ $dark-bg-text-color: #fae2de;
 
 $hover-color: #539e8adb;
 
+
+
+$btn-border-radius: 50px;
+$card-border-radius: 20px;
+$shadow-cards: 0px 10px 10px 0px #c5c5c5b3;
+$hover-shadow-cards: 0px 5px 5px 0 #9c9c9cb3;
+$shadow-active: 0px 3px 3px 0 #7d7d7db3;
+$shadow-menu-cards: 0 0px 10px 0 #c5c5c5b3;
+$hover-shadow-menu-cards: 0px 0px 5px 0px #a2a2a2b3;
+$transition: 0.3s;
+$transform: scale(0.98);
+$transform-active: scale(0.96);
+$transition-active: 0.1s;
+
 // END VARIABLES
 
+
+// RESETS
+
+body {
+    margin: 0px;
+    height: 100%;
+    font-family: "Source Sans 3", sans-serif;
+    background-color: rgb(242, 242, 242);
+}
+
+// END RESETS
+
+
 // GLOBAL ELEMENTS
-
-// #container-wrapper {
-//     min-height: 70vh;
-// }
-
-// #main {
-//     overflow: auto;
-//     padding-bottom: 50px;
-// }
 
 .custom-btn { // Styles all buttons uniformly throughout portfolio
     margin-top: auto;
     background-color: $primary-color;
     color: $dark-bg-text-color;
     border: 0px;
+    border-radius: $btn-border-radius;
+    box-shadow: $shadow-cards;
+    transition: $transition;
     &:hover {
         background-color: $hover-color;
-    }
+        transform: $transform;
+        box-shadow: $hover-shadow-cards;
+      }
     &:active {
-        background-color: $secondary-color !important;
+    background-color: $secondary-color !important;
+    transform: $transform-active;
+    transition: $transition-active;
+    box-shadow: $shadow-active;
     }
 }
 
@@ -92,7 +107,7 @@ footer {
 // UNIVERSAL BEHAVIOUR
 
 section {
-    scroll-margin-top: $navbar-height; // Pads the anchor to sections down to compensate for fixed navbar
+    scroll-margin-top: calc($navbar-height + 20px); // Pads the anchor to sections down to compensate for fixed navbar
 }
 
 // END UNIVERSAL BEHAVIOUR
@@ -103,8 +118,7 @@ section {
 // Homepage
 
 .navbar-custom {
-    min-height: $navbar-height;
-    padding: 10px 0; // content in nav moves up slightly when expanding dropdown on mobile view. this does not happen when min-height is not set or nav padding overridden
+    padding: 10px 0; // Prevents mobile nav items (logo and burger) from sliding up slightly when burger expanded
     background-color: $primary-color !important;
     .nav-link {
         color: $dark-bg-text-color;
@@ -123,7 +137,9 @@ section {
         align-items: center;
         justify-content: space-around;
         color: $dark-bg-text-color;
-        // adjust font sizing
+        p {
+            font-size: 20px;
+        }
     }
     background-color: $primary-color;
     height: calc(100vh - $navbar-height);
@@ -144,19 +160,45 @@ section {
     }
 }
 
-.card {
-    height: $card-height; // seems to mess up vertical spacing
-    .card-img-fit {
-        aspect-ratio: 5 / 3;
-        object-fit: contain;
-    }
-    .card-body {
-        display: flex;
-        flex-direction: column;
+// Homepage Project Cards
+
+.card-container {
+    justify-content: space-evenly;
+    .card {
+        height: $card-height;
+        box-shadow: $shadow-cards;
+        transition: $transition;
+        border-radius: $card-border-radius;
+        .card-img-fit {
+            aspect-ratio: 5 / 3;
+            object-fit: contain;
+        }
+        .card-body {
+            display: flex;
+            flex-direction: column;
+        }
+        &:hover {
+            transform: $transform;
+            box-shadow: $hover-shadow-cards;
+            // when hovering, cards will reduce in size slightly and the shadows will act as if the card has been moved closer to the background
+          }
     }
 }
 
-#get-in-touch {
+// Get In Touch
+
+.form-card {
+    // display: flex;
+    // flex-direction: column;
+    padding: 20px;
+    box-shadow: $shadow-cards;
+    transition: $transition;
+    border-radius: $card-border-radius;
+    background-color: white;
+    margin: 0 auto;
+    .form-name {
+        margin: 0 !important;
+    }
     .message-input-box {
         height: 150px;
     }

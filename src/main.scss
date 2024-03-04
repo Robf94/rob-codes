@@ -158,6 +158,13 @@ section {
             border-radius: 50%;
         }
     }
+    .arrow-container {
+        display: flex;
+        position: absolute;
+        align-self: flex-end;
+        justify-content: center;
+        font-size: 30px;
+    }
 }
 
 // Homepage Project Cards

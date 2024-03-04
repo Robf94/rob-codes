@@ -7,5 +7,9 @@
 <!-- - CSS styling for card hover, active (dynamic drop shadow, card sizing on hover and click - see bootcamp projects) -->
 <!-- - Style contact form as a card with consistent drop shadows to other cards, centre on page -->
 - Add JS functionality for page transitions, navbar collapse on blur
+- Find a better carousel (or use MQ to control mobile height)
 - Compress images (tinyPNG?)
 - Tweak carousels for better image fits in mobile. Darken clickable arrows. Restyle gradient to solid at bottom with caption?
+- Change tab icon
+- Check alignment of homepage headings - get in touch is more indented
+- Add animation (moving up and down) to arrow on homepage

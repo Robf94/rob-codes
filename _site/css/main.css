@@ -41,6 +41,11 @@ footer hr {
   height: 5px;
 }
 
+@keyframes scroll {
+  to {
+    transform: translate(-50%);
+  }
+}
 section {
   scroll-margin-top: 80px;
 }
@@ -120,16 +125,39 @@ section {
   box-shadow: 0px 5px 5px 0 rgba(156, 156, 156, 0.7019607843);
 }
 
+.scroller {
+  display: flex;
+  height: 100%;
+}
+.scroller .scroller-inner {
+  display: flex;
+  gap: 20px;
+}
+.scroller .scroller-inner img {
+  width: 250px;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.scroller[data-animated=true] {
+  overflow: hidden;
+  -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+}
+
+.scroller[data-animated=true] .scroller-inner {
+  flex-wrap: nowrap;
+  animation: scroll 30s linear infinite;
+}
+
 .form-card {
   padding: 20px;
   box-shadow: 0px 10px 10px 0px rgba(197, 197, 197, 0.7019607843);
   transition: 0.3s;
   border-radius: 20px;
   background-color: white;
-  margin: 0 auto;
-}
-.form-card .form-name {
-  margin: 0 !important;
+  margin: 20px auto;
 }
 .form-card .message-input-box {
   height: 150px;

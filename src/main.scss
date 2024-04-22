@@ -16,12 +16,15 @@ $hover-color: #539e8adb;
 
 $btn-border-radius: 50px;
 $card-border-radius: 20px;
+
 $shadow-cards: 0px 10px 10px 0px #c5c5c5b3;
 $hover-shadow-cards: 0px 5px 5px 0 #9c9c9cb3;
 $shadow-active: 0px 3px 3px 0 #7d7d7db3;
 $shadow-menu-cards: 0 0px 10px 0 #c5c5c5b3;
 $hover-shadow-menu-cards: 0px 0px 5px 0px #a2a2a2b3;
+
 $transition: 0.3s;
+
 $transform: scale(0.98);
 $transform-active: scale(0.96);
 $transition-active: 0.1s;
@@ -80,6 +83,14 @@ footer {
 }
 
 // END GLOBAL ELEMENTS
+
+// KEYFRAMES
+
+@keyframes scroll {
+    to {
+        transform: translate(-50%)
+    }
+}
 
 
 // MIXINS
@@ -192,20 +203,45 @@ section {
     }
 }
 
+// Skills
+
+.scroller {
+    display: flex;
+    height: 100%;
+    .scroller-inner {
+        display: flex;
+        gap: 20px;
+        img {
+            width: 250px;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+}
+
+.scroller[data-animated="true"] {
+    overflow: hidden;
+    -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+    mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+}
+
+.scroller[data-animated="true"] .scroller-inner {
+    flex-wrap: nowrap;
+    animation: scroll 30s linear infinite;
+}
+
 // Get In Touch
 
 .form-card {
-    // display: flex;
-    // flex-direction: column;
     padding: 20px;
     box-shadow: $shadow-cards;
     transition: $transition;
     border-radius: $card-border-radius;
     background-color: white;
-    margin: 0 auto;
-    .form-name {
-        margin: 0 !important;
-    }
+    margin: 20px auto;
+    // .form-name {
+    //     margin: 0 !important;
+    // }
     .message-input-box {
         height: 150px;
     }

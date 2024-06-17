@@ -16,7 +16,7 @@ body {
 }
 .custom-btn:hover {
   background-color: rgba(83, 158, 138, 0.8588235294);
-  transform: scale(0.98);
+  transform: scale(0.99);
   box-shadow: 0px 5px 5px 0 rgba(156, 156, 156, 0.7019607843);
 }
 .custom-btn:active {
@@ -34,6 +34,7 @@ footer {
   padding: 20px;
   background-color: #539e8a;
   color: #fae2de;
+  height: 50vh;
 }
 footer hr {
   width: 60px;
@@ -47,7 +48,7 @@ footer hr {
   }
 }
 section {
-  scroll-margin-top: 80px;
+  scroll-margin-top: calc(60px + 3rem);
 }
 
 .navbar-custom {
@@ -61,68 +62,59 @@ section {
   height: 30px;
 }
 
-.homepage-main-section {
-  margin: 20px;
-}
-
 #about-me {
   background-color: #539e8a;
   height: calc(100vh - 60px);
 }
 #about-me .row-about {
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
   color: #fae2de;
+  position: relative;
+  height: 100%;
 }
 #about-me .row-about p {
   font-size: 20px;
 }
-#about-me .txt-container {
-  display: flex;
-  flex-direction: column;
-}
 #about-me .img-container {
-  display: flex;
-  justify-content: center;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: auto;
 }
 #about-me .img-container .rob-photo {
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   width: 300px;
-  height: 300px;
+  aspect-ratio: 1/1;
   border-radius: 50%;
 }
 #about-me .arrow-container {
-  display: flex;
   position: absolute;
   align-self: flex-end;
   justify-content: center;
   font-size: 30px;
 }
 
-.card-container {
-  justify-content: space-evenly;
-}
 .card-container .card {
-  height: 100%;
-  box-shadow: 0px 10px 10px 0px rgba(197, 197, 197, 0.7019607843);
   transition: 0.3s;
   border-radius: 20px;
 }
 .card-container .card .card-img-fit {
   aspect-ratio: 5/3;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 .card-container .card .card-body {
   display: flex;
   flex-direction: column;
 }
 .card-container .card:hover {
-  transform: scale(0.98);
-  box-shadow: 0px 5px 5px 0 rgba(156, 156, 156, 0.7019607843);
+  transform: scale(0.99);
+}
+
+.swiper-button-prev::after, .swiper-button-next::after {
+  color: #539e8a;
+}
+
+.skills-logo-container {
+  display: flex;
+  align-items: center;
 }
 
 .scroller {
@@ -136,8 +128,7 @@ section {
 .scroller .scroller-inner img {
   width: 250px;
   height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 
 .scroller[data-animated=true] {
@@ -180,11 +171,20 @@ section {
   width: 100%;
 }
 .subpages-main .carousel-container .c-img {
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   height: 100%;
 }
 .subpages-main .work-img-container .gradient {
   position: absolute;
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.708), transparent 30%);
+}
+
+@media screen and (min-width: 992px) {
+  .custom-padding-lg {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+  #about-me .row-about {
+    justify-content: space-between;
+  }
 }

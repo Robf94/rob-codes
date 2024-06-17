@@ -12,7 +12,7 @@ $dark-bg-text-color: #fae2de;
 
 $hover-color: #539e8adb;
 
-
+$padding-desktop: 15%;
 
 $btn-border-radius: 50px;
 $card-border-radius: 20px;
@@ -25,7 +25,7 @@ $hover-shadow-menu-cards: 0px 0px 5px 0px #a2a2a2b3;
 
 $transition: 0.3s;
 
-$transform: scale(0.98);
+$transform: scale(0.99);
 $transform-active: scale(0.96);
 $transition-active: 0.1s;
 
@@ -75,6 +75,7 @@ footer {
     padding: $footer-padding;
     background-color: $primary-color;
     color: $dark-bg-text-color;
+    height: 50vh;
     hr {
         width: 60px;
         background-color: $secondary-color;
@@ -118,7 +119,7 @@ footer {
 // UNIVERSAL BEHAVIOUR
 
 section {
-    scroll-margin-top: calc($navbar-height + 20px); // Pads the anchor to sections down to compensate for fixed navbar
+    scroll-margin-top: calc($navbar-height + 3rem); // Pads the anchor to sections down to compensate for fixed navbar. Bootstrap my-5 = 3rem so add that measurement too
 }
 
 // END UNIVERSAL BEHAVIOUR
@@ -139,38 +140,40 @@ section {
     }
 }
 
-.homepage-main-section {
-    margin: $section-margin;
-}
+// .homepage-main-section {
+//     margin: $section-margin;
+// }
 
 #about-me {
+    background-color: $primary-color;
+    height: calc(100vh - $navbar-height);
     .row-about {
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-evenly;
         color: $dark-bg-text-color;
+        position: relative;
+        height: 100%;
         p {
             font-size: 20px;
         }
     }
-    background-color: $primary-color;
-    height: calc(100vh - $navbar-height);
-    .txt-container {
-        display: flex;
-        flex-direction: column;
-    }
+    // .txt-container {
+    //     display: flex;
+    //     flex-direction: column;
+    //     justify-content: space-evenly;
+    // }
     .img-container {
-        display: flex;
-        justify-content: center;
-        width: fit-content;
+        // display: flex;
+        // justify-content: center;
+        width: auto;
         .rob-photo {
             object-fit: cover;
             width: 300px;
-            height: 300px;
+            aspect-ratio: 1/1;
             border-radius: 50%;
         }
     }
     .arrow-container {
-        display: flex;
         position: absolute;
         align-self: flex-end;
         justify-content: center;
@@ -178,13 +181,14 @@ section {
     }
 }
 
-// Homepage Project Cards
+// Homepage Project Cards within slider.js
 
 .card-container {
-    justify-content: space-evenly;
+    // -webkit-mask: linear-gradient(90deg, transparent, white 1%, white 99%, transparent);
+    // mask: linear-gradient(90deg, transparent, white 1%, white 99%, transparent);
     .card {
-        height: $card-height;
-        box-shadow: $shadow-cards;
+        // height: $card-height;
+        // box-shadow: $shadow-cards;
         transition: $transition;
         border-radius: $card-border-radius;
         .card-img-fit {
@@ -197,13 +201,33 @@ section {
         }
         &:hover {
             transform: $transform;
-            box-shadow: $hover-shadow-cards;
+            // box-shadow: $hover-shadow-cards;
             // when hovering, cards will reduce in size slightly and the shadows will act as if the card has been moved closer to the background
           }
     }
 }
 
+// Swiper customisation
+
+// Colour nav buttons
+.swiper-button-prev::after, .swiper-button-next::after {
+    color: $primary-color;
+}
+
+// Move buttons outside of card area
+
+// .swiper-button-next {
+//     left: -40px;
+//     right: auto;
+// }
+
+
 // Skills
+
+.skills-logo-container {
+    display: flex;
+    align-items: center;
+}
 
 .scroller {
     display: flex;
@@ -288,6 +312,19 @@ section {
 
 
 // MEDIA QUERIES
+
+@media screen and (min-width: 992px) {
+
+    .custom-padding-lg {
+        padding-left: $padding-desktop;
+        padding-right: $padding-desktop;
+    }
+
+    #about-me .row-about {
+        justify-content: space-between;
+    }
+
+}
 
 
 

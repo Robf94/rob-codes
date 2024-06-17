@@ -78,3 +78,39 @@ function addAnimation() {
         });
     });
 }
+
+// Swiper
+
+const swiper = new Swiper('.swiper', {
+    // Default parameters
+    slidesPerView: 1,
+    spaceBetween: 30,
+
+    breakpoints: {
+        576: {
+            slidesPerView: 2,
+        },
+        1400: {
+            slidesPerView: 3,
+        }
+    },
+
+    // Autoplay
+    // autoplay: {
+    //     disableOnInteraction: true,
+    // },
+  
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+      dynamicBullets: false,
+    },
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+});
+  
+// End Swiper

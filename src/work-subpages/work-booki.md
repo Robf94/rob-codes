@@ -1,6 +1,4 @@
 ---
-# layout: work-content.njk
-
 projectType: website # Determines type of project the case study is and replaces the relevant text in the template
 
 pageTitle: Booki

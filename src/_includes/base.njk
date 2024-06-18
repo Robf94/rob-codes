@@ -1,3 +1,4 @@
+{# This is the base template to use across every page. Includes header/nav and footer. Amended nav links so they work the same even in subpages. When clicking nav links these will return to homepage and to the relevant section id. If this breaks for any reason, revert back to original method (nav link variables on subpages, new njk template for subpages to input different nav links, amend work-subpages.json file accordingly). #}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,9 +9,11 @@
     <link href="../css/main.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/2f49d265bf.js" crossorigin="anonymous"></script>
     <link href="../assets/logos/Web Dev Rob-logos_transparent.png" type="image/x-icon" rel="shortcut icon">
+    {# Google Fonts #}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
     <!-- Swiper -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
@@ -19,7 +22,7 @@
   <body>
   <nav class="navbar navbar-custom sticky-top navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
-        <a class="navbar-brand logo-container h-100 p-0 m-0" href="../index.html">
+        <a class="navbar-brand logo-container h-100 p-0 m-0" href="/">
           <img class="img-fluid header-logo" src="../assets/logos/rob-codes-header.png" alt="Logo">
         </a>      
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,13 +30,10 @@
         </button>
         <div class="collapse navbar-collapse flex-grow-0" id="navbarNavAltMarkup">
           <div class="navbar-nav text-center">
-            <!-- Creates a block to enable changing of nav links in subpages -->
-            {% block navLinks %}
-            <a class="nav-link" href="#about-me">About Me</a>
-            <a class="nav-link" href="#my-projects">Work</a>
-            <a class="nav-link" href="#get-in-touch">Get in touch</a>
-            {% endblock %}
-            <!-- Add more links to nav as per homepage headings -->
+            {# BASE TEMPLATE #}
+            <a class="nav-link" href="/#about-me">About Me</a>
+            <a class="nav-link" href="/#my-projects">Work</a>
+            <a class="nav-link" href="/#contact">Get in touch</a>
           </div>
           <!-- Make mobile menu auto collapse on click? -->
         </div>

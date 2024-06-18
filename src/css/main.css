@@ -1,8 +1,11 @@
 body {
   margin: 0px;
   height: 100%;
-  font-family: "Source Sans 3", sans-serif;
+  font-family: "Outfit", sans-serif;
   background-color: rgb(242, 242, 242);
+}
+body h1, body h2, body h3, body h4, body h5, body h6 {
+  font-family: "Fugaz One", sans-serif;
 }
 
 .custom-btn {

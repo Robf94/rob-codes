@@ -37,8 +37,12 @@ $transition-active: 0.1s;
 body {
     margin: 0px;
     height: 100%;
-    font-family: "Source Sans 3", sans-serif;
+    font-family: "Outfit", sans-serif;
     background-color: rgb(242, 242, 242);
+    h1, h2, h3, h4, h5, h6 {
+        font-family: "Fugaz One", sans-serif;
+        // font-weight: bold;
+    }
 }
 
 // END RESETS

@@ -188,8 +188,6 @@ section {
 // Homepage Project Cards within slider.js
 
 .card-container {
-    // -webkit-mask: linear-gradient(90deg, transparent, white 1%, white 99%, transparent);
-    // mask: linear-gradient(90deg, transparent, white 1%, white 99%, transparent);
     .card {
         // height: $card-height;
         // box-shadow: $shadow-cards;
@@ -231,31 +229,6 @@ section {
 .skills-logo-container {
     display: flex;
     align-items: center;
-}
-
-.scroller {
-    display: flex;
-    height: 100%;
-    .scroller-inner {
-        display: flex;
-        gap: 20px;
-        img {
-            width: 250px;
-            height: 100%;
-            object-fit: contain;
-        }
-    }
-}
-
-.scroller[data-animated="true"] {
-    overflow: hidden;
-    -webkit-mask: linear-gradient(90deg, transparent, white 10%, white 90%, transparent);
-    mask: linear-gradient(90deg, transparent, white 10%, white 90%, transparent);
-}
-
-.scroller[data-animated="true"] .scroller-inner {
-    flex-wrap: nowrap;
-    animation: scroll 30s linear infinite;
 }
 
 // Get In Touch
@@ -317,6 +290,12 @@ section {
 
 // MEDIA QUERIES
 
+@media screen and (min-width: 576px) {
+    .card-container {
+        mask: linear-gradient(90deg, transparent, white 1%, white 99%, transparent);
+    }
+}
+
 @media screen and (min-width: 992px) {
 
     .custom-padding-lg {
@@ -329,7 +308,5 @@ section {
     }
 
 }
-
-
 
 // END MEDIA QUERIES

@@ -120,31 +120,6 @@ section {
   align-items: center;
 }
 
-.scroller {
-  display: flex;
-  height: 100%;
-}
-.scroller .scroller-inner {
-  display: flex;
-  gap: 20px;
-}
-.scroller .scroller-inner img {
-  width: 250px;
-  height: 100%;
-  object-fit: contain;
-}
-
-.scroller[data-animated=true] {
-  overflow: hidden;
-  -webkit-mask: linear-gradient(90deg, transparent, white 10%, white 90%, transparent);
-  mask: linear-gradient(90deg, transparent, white 10%, white 90%, transparent);
-}
-
-.scroller[data-animated=true] .scroller-inner {
-  flex-wrap: nowrap;
-  animation: scroll 30s linear infinite;
-}
-
 .form-card {
   padding: 20px;
   box-shadow: 0px 10px 10px 0px rgba(197, 197, 197, 0.7019607843);
@@ -182,6 +157,11 @@ section {
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.708), transparent 30%);
 }
 
+@media screen and (min-width: 576px) {
+  .card-container {
+    mask: linear-gradient(90deg, transparent, white 1%, white 99%, transparent);
+  }
+}
 @media screen and (min-width: 992px) {
   .custom-padding-lg {
     padding-left: 15%;

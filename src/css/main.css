@@ -159,7 +159,7 @@ section {
 
 @media screen and (min-width: 576px) {
   .card-container {
-    mask: linear-gradient(90deg, transparent, white 1%, white 99%, transparent);
+    mask-image: linear-gradient(90deg, transparent, white 1%, white 99%, transparent);
   }
 }
 @media screen and (min-width: 992px) {

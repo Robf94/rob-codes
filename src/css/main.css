@@ -115,9 +115,10 @@ section {
   color: #539e8a;
 }
 
-.skills-logo-container {
+.skills-logo-wrapper {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .form-card {
@@ -137,20 +138,6 @@ section {
 }
 .subpages-main .work-title-container {
   margin-bottom: 20px;
-}
-.subpages-main .carousel-container .gradient {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background-image: linear-gradient(to top, black, transparent 40%);
-}
-.subpages-main .carousel-container .carousel-item {
-  height: 500px;
-  width: 100%;
-}
-.subpages-main .carousel-container .c-img {
-  object-fit: contain;
-  height: 100%;
 }
 .subpages-main .work-img-container .gradient {
   position: absolute;

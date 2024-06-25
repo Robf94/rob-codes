@@ -100,24 +100,24 @@ footer {
 
 // MIXINS
 
-@mixin carousel-styling {
-    // Tweak width at a later date
-    .gradient {
-        position:absolute;
-        height: 100%;
-        width: 100%;
-        background-image: linear-gradient(to top, black, transparent 40%);
-    }
-    .carousel-item {
-        height: 500px;
-        width: 100%;
-    }
-    .c-img {
-        object-fit:contain;
-        height: 100%;
-        // width: 100%;
-    }
-}
+// Subpage carousel - remove after replacing with Slider.js
+// @mixin carousel-styling {
+//     .gradient {
+//         position:absolute;
+//         height: 100%;
+//         width: 100%;
+//         background-image: linear-gradient(to top, black, transparent 40%);
+//     }
+//     .carousel-item {
+//         height: 500px;
+//         width: 100%;
+//     }
+//     .c-img {
+//         object-fit:contain;
+//         height: 100%;
+//         // width: 100%;
+//     }
+// }
 
 
 // UNIVERSAL BEHAVIOUR
@@ -226,10 +226,12 @@ section {
 
 // Skills
 
-.skills-logo-container {
+.skills-logo-wrapper {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
+
 
 // Get In Touch
 
@@ -260,9 +262,9 @@ section {
         margin-bottom: $section-margin;
     }
 
-    .carousel-container {
-        @include carousel-styling();
-    }
+    // .carousel-container {
+    //     @include carousel-styling();
+    // }
     
     .work-img-container {
         // height: 500px;
@@ -292,6 +294,8 @@ section {
 
 @media screen and (min-width: 576px) {
     .card-container {
+        // padding: 50px !important;
+        // Trying to add padding so the nav and pagination appears outside of cards, but try not to use !important
         mask-image: linear-gradient(90deg, transparent, white 1%, white 99%, transparent);
     }
 }
@@ -306,7 +310,6 @@ section {
     #about-me .row-about {
         justify-content: space-between;
     }
-
 }
 
 // END MEDIA QUERIES

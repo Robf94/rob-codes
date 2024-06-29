@@ -2,6 +2,7 @@
     "cSpell.language": "en,en-GB",
     "emmet.includeLanguages": {
         "nunjucks": "html",
-    }
+    },
+    "editor.selectionHighlight": true
 
 }

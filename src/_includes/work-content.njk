@@ -3,89 +3,77 @@ layout: base.njk
 ---
 {# This page creates a template for relevant info to be input within markdown files of the specific job. #}
 <section class="subpages-main" id="{{pageId}}">
-
     <div class="container-fluid">
-
         <div class="row">
             <div class="col-12 work-title-container">
                 <h2 class="section-headings">{{pageTitle}}</h2>
             </div>
         </div>
-    
         <div class="row">
-
             <div class="col-12 col-md-6 work-img-container">
-
-                <div class="gradient"></div>
-
-                <div id="carouselExampleAutoplaying" class="carousel slide carousel-container" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-            
+                <!-- Slider main container -->
+                <div class="swiper subpage-swiper card-container">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
                         {% if desktopScreenshot %}
-                        <div class="carousel-item active">
-                            <div class="gradient"></div>
-                            <img src="{{ desktopScreenshot }}" class="d-block w-100 c-img img-fluid desktop-screenshot" alt="Desktop view of the {{ pageTitle }} {{ projectType }}">  
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>Desktop Layout</h5>
+                        <div class="swiper-slide subpage-swiper-slide">
+                            <div class="image-container" style="background-image: url('{{ desktopScreenshot }}');">
+                                <img src="{{ desktopScreenshot }}" class="img-fluid" alt="Desktop view of the {{ pageTitle }} {{ projectType }}">
+                                <!-- <div class="carousel-caption d-none d-md-block">
+                                    <h5>Desktop Layout</h5>
+                                </div> -->
                             </div>
                         </div>
                         {% endif %}
-
                         {% if tabletScreenshot %}
-                        <div class="carousel-item">
-                            <div class="gradient"></div>
-                            <img src="{{ tabletScreenshot }}" class="d-block w-100 c-img img-fluid tablet-screenshot" alt="Tablet view of the {{ pageTitle }} {{ projectType }}">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>Tablet Layout</h5>
+                        <div class="swiper-slide subpage-swiper-slide">
+                            <div class="image-container" style="background-image: url('{{ tabletScreenshot }}');">
+                                <img src="{{ tabletScreenshot }}" class="img-fluid" alt="Tablet view of the {{ pageTitle }} {{ projectType }}">
+                                <!-- <div class="carousel-caption d-none d-md-block">
+                                    <h5>Tablet Layout</h5>
+                                </div> -->
                             </div>
                         </div>
                         {% endif %}
-
                         {% if mobileScreenshot %}
-                        <div class="carousel-item">
-                            <div class="gradient"></div>
-                            <img src="{{ mobileScreenshot }}" class="d-block w-100 c-img img-fluid mobile-screenshot" alt="Mobile view of the {{ pageTitle }} {{ projectType }}">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>Mobile Layout</h5>
+                        <div class="swiper-slide subpage-swiper-slide">
+                            <div class="image-container" style="background-image: url('{{ mobileScreenshot }}');">
+                                <img src="{{ mobileScreenshot }}" class="img-fluid" alt="Mobile view of the {{ pageTitle }} {{ projectType }}">
+                                <!-- <div class="carousel-caption d-none d-md-block">
+                                    <h5>Mobile Layout</h5>
+                                </div> -->
                             </div>
                         </div>
                         {% endif %}
-            
                     </div>
-            
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                    </button>
-            
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                    </button>
-
-                    <!-- Style buttons so visible -->
-            
+                    <!-- Pagination -->
+                    <div class="swiper-pagination"></div>
+                    <!-- Navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="autoplay-progress">
+                        <svg viewBox="0 0 48 48">
+                            <circle cx="24" cy="24" r="20"></circle>
+                        </svg>
+                        <span></span>
+                    </div>
                 </div>
             </div>
-
             <div class="col-12 col-md-6">
-
                 <div class="desc-container">
                     <h3 class="section-headings">About</h3>
                     <p>{{ aboutContent }}</p>
                 </div>
-
                 <div class="skills-container">
                     <h3>Skills Learned</h3>
                     <ul>
                         {% for skill in skills %}
-                            <li>{{ skill }}</li>
+                        <li>{{ skill }}</li>
                         {% endfor %}
                     </ul>
                 </div>
-
                 <a class="btn btn-primary custom-btn" href="{{ projectLink }}" target="_blank" rel="noopener noreferrer nofollow">View Project</a>
-
                 <!-- Change order for mobile view using MQs - description and skills at top of page, carousel below -->
             </div>
         </div>

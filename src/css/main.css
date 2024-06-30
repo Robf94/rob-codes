@@ -142,7 +142,7 @@ section {
   bottom: -40%;
   background-image: inherit;
   background-size: cover;
-  filter: blur(20px); /* Adjust this value to change blur radius */
+  filter: blur(20px);
   transform: scale(1.2);
 }
 .swiper .subpage-swiper-slide .image-container img {
@@ -156,7 +156,6 @@ section {
 .skills-logo-wrapper {
   display: flex;
   align-items: center;
-  justify-content: center;
 }
 
 .form-card {

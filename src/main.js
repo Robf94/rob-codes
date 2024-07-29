@@ -42,92 +42,102 @@
 //     }
 // }, false);
 
-if (document.querySelector('#name') && document.querySelector('#email') && document.querySelector('#floatingTextArea')) {
-    // Only execute the form validation code if all required elements are present
+if (
+  document.querySelector("#name") &&
+  document.querySelector("#email") &&
+  document.querySelector("#floatingTextArea")
+) {
+  // Only execute the form validation code if all required elements are present
 
-    // FORM VALIDATION
+  // FORM VALIDATION
 
-    // Get default border colors (to use on input when validation passes)
-    var borderStylePass = document.querySelector('#name').style.border;
-    // Set fail border colors (to use on input when validation fails)
-    var borderStyleFail = '1px solid red';
-    // Get the form submit button
-    var submit_button = document.querySelector('.form_submit');
-    // Attach form event listener
-    submit_button.addEventListener("click", function(event){
-        // Get the form "name" element
-        var name = document.querySelector('#name');
-        // Get the form "email" element
-        var email = document.querySelector('#email');
-        // Get the form "floatingTextArea" element
-        var message = document.querySelector('#floatingTextArea');
+  // Get default border colors (to use on input when validation passes)
+  var borderStylePass = document.querySelector("#name").style.border;
+  // Set fail border colors (to use on input when validation fails)
+  var borderStyleFail = "1px solid red";
+  // Get the form submit button
+  var submit_button = document.querySelector(".form_submit");
+  // Attach form event listener
+  submit_button.addEventListener(
+    "click",
+    function (event) {
+      // Get the form "name" element
+      var name = document.querySelector("#name");
+      // Get the form "email" element
+      var email = document.querySelector("#email");
+      // Get the form "floatingTextArea" element
+      var message = document.querySelector("#floatingTextArea");
 
-        // Initialize validation flag
-        var blnValidated = true;
+      // Initialize validation flag
+      var blnValidated = true;
 
-        // Validate name input
-        name.style.border = borderStylePass; // Set default border style
-        if (!name.value.trim()) { // Check if name value is empty or whitespace
-            blnValidated = false;
-            name.style.border = borderStyleFail; // Set fail border style
-        }
+      // Validate name input
+      name.style.border = borderStylePass; // Set default border style
+      if (!name.value.trim()) {
+        // Check if name value is empty or whitespace
+        blnValidated = false;
+        name.style.border = borderStyleFail; // Set fail border style
+      }
 
-        // Validate email input
-        email.style.border = borderStylePass; // Set default border style
-        if (!email.value.trim()) { // Check if email value is empty or whitespace
-            blnValidated = false;
-            email.style.border = borderStyleFail; // Set fail border style
-        }
+      // Validate email input
+      email.style.border = borderStylePass; // Set default border style
+      if (!email.value.trim()) {
+        // Check if email value is empty or whitespace
+        blnValidated = false;
+        email.style.border = borderStyleFail; // Set fail border style
+      }
 
-        // Validate message textarea
-        message.style.border = borderStylePass; // Set default border style
-        if (!message.value.trim()) { // Check if message value is empty or whitespace
-            blnValidated = false;
-            message.style.border = borderStyleFail; // Set fail border style
-        }
+      // Validate message textarea
+      message.style.border = borderStylePass; // Set default border style
+      if (!message.value.trim()) {
+        // Check if message value is empty or whitespace
+        blnValidated = false;
+        message.style.border = borderStyleFail; // Set fail border style
+      }
 
-        // Prevent form submission if validation failed
-        if (!blnValidated) {
-            event.preventDefault();
-        }
-    }, false);
+      // Prevent form submission if validation failed
+      if (!blnValidated) {
+        event.preventDefault();
+      }
+    },
+    false
+  );
 }
-
 
 // Homepage Swiper
 
-const homepageSwiper = new Swiper('.homepage-swiper', {
-    // Default parameters
-    slidesPerView: 1,
-    spaceBetween: 30,
+const homepageSwiper = new Swiper(".homepage-swiper", {
+  // Default parameters
+  slidesPerView: 1,
+  spaceBetween: 30,
 
-    breakpoints: {
-        576: {
-            slidesPerView: 2,
-        },
-        1400: {
-            slidesPerView: 3,
-        }
+  breakpoints: {
+    576: {
+      slidesPerView: 2,
     },
+    1400: {
+      slidesPerView: 3,
+    },
+  },
 
-    // Autoplay
-    // autoplay: {
-    //     disableOnInteraction: true,
-    // },
-  
-    // If we need pagination
-    pagination: {
-      el: '.swiper-pagination',
-      dynamicBullets: false,
-    },
-  
-    // Navigation arrows
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
+  // Autoplay
+  // autoplay: {
+  //     disableOnInteraction: true,
+  // },
+
+  // If we need pagination
+  pagination: {
+    el: ".swiper-pagination",
+    dynamicBullets: false,
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
 });
-  
+
 // End Swiper
 
 // Work Subpage Swiper
@@ -139,20 +149,20 @@ const subpageSwiper = new Swiper(".subpage-swiper", {
   centeredSlides: true,
   autoplay: {
     delay: 5000,
-    disableOnInteraction: false
+    disableOnInteraction: false,
   },
   pagination: {
     el: ".swiper-pagination",
-    clickable: true
+    clickable: true,
   },
   navigation: {
     nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev"
+    prevEl: ".swiper-button-prev",
   },
   on: {
     autoplayTimeLeft(s, time, progress) {
       progressCircle.style.setProperty("--progress", 1 - progress);
       progressContent.textContent = `${Math.ceil(time / 1000)}s`;
-    }
-  }
+    },
+  },
 });

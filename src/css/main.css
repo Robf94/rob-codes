@@ -4,7 +4,12 @@ body {
   font-family: "Outfit", sans-serif;
   background-color: rgb(242, 242, 242);
 }
-body h1, body h2, body h3, body h4, body h5, body h6 {
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6 {
   font-family: "Fugaz One", sans-serif;
 }
 
@@ -111,7 +116,8 @@ section {
   transform: scale(0.99);
 }
 
-.swiper-button-prev::after, .swiper-button-next::after {
+.swiper-button-prev::after,
+.swiper-button-next::after {
   color: #539e8a;
 }
 

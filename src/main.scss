@@ -31,60 +31,64 @@ $transition-active: 0.1s;
 
 // END VARIABLES
 
-
 // RESETS
 
 body {
-    margin: 0px;
-    height: 100%;
-    font-family: "Outfit", sans-serif;
-    background-color: rgb(242, 242, 242);
-    h1, h2, h3, h4, h5, h6 {
-        font-family: "Fugaz One", sans-serif;
-        // font-weight: bold;
-    }
+  margin: 0px;
+  height: 100%;
+  font-family: "Outfit", sans-serif;
+  background-color: rgb(242, 242, 242);
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Fugaz One", sans-serif;
+    // font-weight: bold;
+  }
 }
 
 // END RESETS
 
-
 // GLOBAL ELEMENTS
 
-.custom-btn { // Styles all buttons uniformly throughout portfolio
-    margin-top: auto;
-    background-color: $primary-color;
-    color: $dark-bg-text-color;
-    border: 0px;
-    border-radius: $btn-border-radius;
-    box-shadow: $shadow-cards;
-    transition: $transition;
-    &:hover {
-        background-color: $hover-color;
-        transform: $transform;
-        box-shadow: $hover-shadow-cards;
-      }
-    &:active {
+.custom-btn {
+  // Styles all buttons uniformly throughout portfolio
+  margin-top: auto;
+  background-color: $primary-color;
+  color: $dark-bg-text-color;
+  border: 0px;
+  border-radius: $btn-border-radius;
+  box-shadow: $shadow-cards;
+  transition: $transition;
+  &:hover {
+    background-color: $hover-color;
+    transform: $transform;
+    box-shadow: $hover-shadow-cards;
+  }
+  &:active {
     background-color: $secondary-color !important;
     transform: $transform-active;
     transition: $transition-active;
     box-shadow: $shadow-active;
-    }
+  }
 }
 
 #form-submit-btn {
-    margin-top: 1rem;
+  margin-top: 1rem;
 }
 
 footer {
-    padding: $footer-padding;
-    background-color: $primary-color;
-    color: $dark-bg-text-color;
-    height: 50vh;
-    hr {
-        width: 60px;
-        background-color: $secondary-color;
-        height: 5px;
-    }
+  padding: $footer-padding;
+  background-color: $primary-color;
+  color: $dark-bg-text-color;
+  height: 50vh;
+  hr {
+    width: 60px;
+    background-color: $secondary-color;
+    height: 5px;
+  }
 }
 
 // END GLOBAL ELEMENTS
@@ -92,11 +96,10 @@ footer {
 // KEYFRAMES
 
 @keyframes scroll {
-    to {
-        transform: translate(-50%)
-    }
+  to {
+    transform: translate(-50%);
+  }
 }
-
 
 // MIXINS
 
@@ -119,29 +122,29 @@ footer {
 //     }
 // }
 
-
 // UNIVERSAL BEHAVIOUR
 
 section {
-    scroll-margin-top: calc($navbar-height + 3rem); // Pads the anchor to sections down to compensate for fixed navbar. Bootstrap my-5 = 3rem so add that measurement too
+  scroll-margin-top: calc(
+    $navbar-height + 3rem
+  ); // Pads the anchor to sections down to compensate for fixed navbar. Bootstrap my-5 = 3rem so add that measurement too
 }
 
 // END UNIVERSAL BEHAVIOUR
-
 
 // GENERAL SASS
 
 // Homepage
 
 .navbar-custom {
-    padding: 10px 0; // Prevents mobile nav items (logo and burger) from sliding up slightly when burger expanded
-    background-color: $primary-color !important;
-    .nav-link {
-        color: $dark-bg-text-color;
-    }
-    .header-logo {
-        height: 30px;
-    }
+  padding: 10px 0; // Prevents mobile nav items (logo and burger) from sliding up slightly when burger expanded
+  background-color: $primary-color !important;
+  .nav-link {
+    color: $dark-bg-text-color;
+  }
+  .header-logo {
+    height: 30px;
+  }
 }
 
 // .homepage-main-section {
@@ -149,114 +152,115 @@ section {
 // }
 
 #about-me {
-    background-color: $primary-color;
-    height: calc(100vh - $navbar-height);
-    .row-about {
-        align-items: center;
-        justify-content: space-evenly;
-        color: $dark-bg-text-color;
-        position: relative;
-        height: 100%;
-        p {
-            font-size: 20px;
-        }
+  background-color: $primary-color;
+  height: calc(100vh - $navbar-height);
+  .row-about {
+    align-items: center;
+    justify-content: space-evenly;
+    color: $dark-bg-text-color;
+    position: relative;
+    height: 100%;
+    p {
+      font-size: 20px;
     }
-    // .txt-container {
-    //     display: flex;
-    //     flex-direction: column;
-    //     justify-content: space-evenly;
-    // }
-    .img-container {
-        // display: flex;
-        // justify-content: center;
-        width: auto;
-        .rob-photo {
-            object-fit: cover;
-            width: 300px;
-            aspect-ratio: 1/1;
-            border-radius: 50%;
-        }
+  }
+  // .txt-container {
+  //     display: flex;
+  //     flex-direction: column;
+  //     justify-content: space-evenly;
+  // }
+  .img-container {
+    // display: flex;
+    // justify-content: center;
+    width: auto;
+    .rob-photo {
+      object-fit: cover;
+      width: 300px;
+      aspect-ratio: 1/1;
+      border-radius: 50%;
     }
-    .arrow-container {
-        position: absolute;
-        align-self: flex-end;
-        justify-content: center;
-        font-size: 30px;
-    }
+  }
+  .arrow-container {
+    position: absolute;
+    align-self: flex-end;
+    justify-content: center;
+    font-size: 30px;
+  }
 }
 
 // Homepage Project Cards within slider.js
 
 .card-container {
-    .card {
-        // height: $card-height;
-        // box-shadow: $shadow-cards;
-        transition: $transition;
-        border-radius: $card-border-radius;
-        .card-img-fit {
-            aspect-ratio: 5 / 3;
-            object-fit: contain;
-        }
-        .card-body {
-            display: flex;
-            flex-direction: column;
-        }
-        &:hover {
-            transform: $transform;
-            // box-shadow: $hover-shadow-cards;
-            // when hovering, cards will reduce in size slightly and the shadows will act as if the card has been moved closer to the background
-          }
+  .card {
+    // height: $card-height;
+    // box-shadow: $shadow-cards;
+    transition: $transition;
+    border-radius: $card-border-radius;
+    .card-img-fit {
+      aspect-ratio: 5 / 3;
+      object-fit: contain;
     }
+    .card-body {
+      display: flex;
+      flex-direction: column;
+    }
+    &:hover {
+      transform: $transform;
+      // box-shadow: $hover-shadow-cards;
+      // when hovering, cards will reduce in size slightly and the shadows will act as if the card has been moved closer to the background
+    }
+  }
 }
 
 // Swiper customisation
 
 // Colour nav buttons
-.swiper-button-prev::after, .swiper-button-next::after {
-    color: $primary-color;
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  color: $primary-color;
 }
 
 .swiper {
-    .subpage-swiper-slide {
-        height: 405px; // Consistent height
+  .subpage-swiper-slide {
+    height: 405px; // Consistent height
+    position: relative;
+    overflow: hidden;
+
+    .image-container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      border-radius: $card-border-radius;
+      overflow: hidden;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0%;
+        left: -40%;
+        right: -40%;
+        bottom: -40%;
+        background-image: inherit;
+        background-size: cover;
+        filter: blur(20px);
+        transform: scale(1.2);
+      }
+
+      img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
         position: relative;
-        overflow: hidden;
-
-        .image-container {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            border-radius: $card-border-radius;
-            overflow: hidden;
-
-            &::before {
-                content: '';
-                position: absolute;
-                top: 0%;
-                left: -40%;
-                right: -40%;
-                bottom: -40%;
-                background-image: inherit;
-                background-size: cover;
-                filter: blur(20px);
-                transform: scale(1.2);
-            }
-
-            img {
-                max-width: 100%;
-                max-height: 100%;
-                object-fit: cover;
-                position: relative;
-                z-index: 1;
-            }
-        }
+        z-index: 1;
+      }
     }
+  }
 }
 
 // Move buttons outside of card area
@@ -266,101 +270,94 @@ section {
 //     right: auto;
 // }
 
-
 // Skills
 
 .skills-logo-wrapper {
-    display: flex;
-    align-items: center;
-    // max-width: 100%;
-    // justify-content: center;
+  display: flex;
+  align-items: center;
+  // max-width: 100%;
+  // justify-content: center;
 }
-
 
 // Get In Touch
 
 .form-card {
-    padding: 20px;
-    box-shadow: $shadow-cards;
-    transition: $transition;
-    border-radius: $card-border-radius;
-    background-color: white;
-    margin: 20px auto;
-    // .form-name {
-    //     margin: 0 !important;
-    // }
-    .message-input-box {
-        height: 150px;
-    }
+  padding: 20px;
+  box-shadow: $shadow-cards;
+  transition: $transition;
+  border-radius: $card-border-radius;
+  background-color: white;
+  margin: 20px auto;
+  // .form-name {
+  //     margin: 0 !important;
+  // }
+  .message-input-box {
+    height: 150px;
+  }
 }
 
 // End homepage
 
-
 // Subpages
 
-
 .subpages-main {
-    margin: $section-margin;
-    .work-title-container {
-        margin-bottom: $section-margin;
-    }
+  margin: $section-margin;
+  .work-title-container {
+    margin-bottom: $section-margin;
+  }
 }
 
-
 .autoplay-progress {
-position: absolute;
-right: 16px;
-bottom: 16px;
-z-index: 10;
-width: 48px;
-height: 48px;
-display: flex;
-align-items: center;
-justify-content: center;
-font-weight: bold;
-color: $primary-color;
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  z-index: 10;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: $primary-color;
 }
 
 .autoplay-progress svg {
---progress: 0;
-position: absolute;
-left: 0;
-top: 0px;
-z-index: 10;
-width: 100%;
-height: 100%;
-stroke-width: 4px;
-stroke: $primary-color;
-fill: none;
-stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
-stroke-dasharray: 125.6;
-transform: rotate(-90deg);
+  --progress: 0;
+  position: absolute;
+  left: 0;
+  top: 0px;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  stroke-width: 4px;
+  stroke: $primary-color;
+  fill: none;
+  stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
+  stroke-dasharray: 125.6;
+  transform: rotate(-90deg);
 }
 
 // END GENERAL SASS
 
-
 // MEDIA QUERIES
 
-@media screen and (min-width: 576px) {
-    .card-container {
-        // padding: 50px !important;
-        // Trying to add padding so the nav and pagination appears outside of cards, but try not to use !important
-        // mask-image: linear-gradient(90deg, transparent, white 1%, white 99%, transparent);
-    }
-}
+// @media screen and (min-width: 576px) {
+//   .card-container {
+//     padding: 50px !important;
+//     // Trying to add padding so the nav and pagination appears outside of cards, but try not to use !important
+//     mask-image: linear-gradient(90deg, transparent, white 1%, white 99%, transparent);
+//   }
+// }
 
 @media screen and (min-width: 992px) {
+  .custom-padding-lg {
+    padding-left: $padding-desktop;
+    padding-right: $padding-desktop;
+  }
 
-    .custom-padding-lg {
-        padding-left: $padding-desktop;
-        padding-right: $padding-desktop;
-    }
-
-    #about-me .row-about {
-        justify-content: space-between;
-    }
+  #about-me .row-about {
+    justify-content: space-between;
+  }
 }
 
 // END MEDIA QUERIES

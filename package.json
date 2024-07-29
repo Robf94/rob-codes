@@ -1,16 +1,16 @@
 {
+  "name": "rob-codes",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "dependencies": {
     "@11ty/eleventy": "^2.0.1"
   },
-  "name": "tcg-static-site",
-  "version": "1.0.0",
-  "main": "index.js",
   "devDependencies": {},
-  "scripts": {
-    "start": "npx @11ty/eleventy --serve",
-    "build": "npx @11ty/eleventy",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "author": "",
   "license": "ISC",
   "description": ""

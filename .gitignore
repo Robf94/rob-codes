@@ -9,3 +9,5 @@
 
 # VSCode Settings
 /.vscode/
+
+# Note - to add tracked files to .gitignore, first type the command "git rm -r --cached [file/folder path from root]"

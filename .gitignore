@@ -6,3 +6,6 @@
 
 # Output
 /_site/
+
+# VSCode Settings
+/.vscode/

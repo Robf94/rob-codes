@@ -19,7 +19,7 @@ module.exports = function (eleventyConfig) {
     HTMLTemplateEngine: "njk",
     // Specify that Nunjucks includes should have the .njk extension
     markdownTemplateEngine: "njk",
-    // Add additional directories or files to watch for changes
+    // Add additional directories or files to wa tch for changes
     addWatchTarget: "./src/_data",
   };
 };
